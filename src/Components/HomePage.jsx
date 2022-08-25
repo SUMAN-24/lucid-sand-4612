@@ -162,6 +162,17 @@ const HomePage = () => {
           </Box>
         </VStack>
       </Stack>
+
+      <Stack>
+        <VStack>
+          <Box mt="3.6rem">
+            <Heading fontFamily="sans-serif">
+              <Text>Millions of voices have</Text>
+              <Text> already been heard</Text>
+            </Heading>
+          </Box>
+        </VStack>
+      </Stack>
     </div>
   );
 };

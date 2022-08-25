@@ -1,5 +1,6 @@
 import {
   Box,
+  Divider,
   Heading,
   HStack,
   Image,
@@ -166,10 +167,93 @@ const HomePage = () => {
       <Stack>
         <VStack>
           <Box mt="3.6rem">
-            <Heading fontFamily="sans-serif" color="rgb(16,24,52)">
+            <Heading
+              fontFamily="sans-serif"
+              fontSize="5xl"
+              fontWeight="semibold"
+              color="rgb(16,24,52)"
+            >
               <Text>Millions of voices have</Text>
               <Text> already been heard</Text>
             </Heading>
+          </Box>
+
+          <Box pt="1.5rem">
+            <HStack gap="5rem">
+              <VStack>
+                <Box>
+                  <Heading
+                    fontWeight="semibold"
+                    fontFamily="body"
+                    fontSize="6xl"
+                    color="rgb(16,24,52)"
+                  >
+                    280 M
+                  </Heading>
+                  <Divider
+                    width="18rem"
+                    fontWeight="bold"
+                    fontFamily="body"
+                    borderColor="rgb(16,24,52)"
+                    borderWidth="1.2px"
+                  />
+                </Box>
+                <Box pt="1rem">
+                  <Text fontSize="xl" fontWeight="semibold">
+                    Voters
+                  </Text>
+                </Box>
+              </VStack>
+
+              <VStack>
+                <Box>
+                  <Heading
+                    fontWeight="semibold"
+                    fontFamily="body"
+                    fontSize="6xl"
+                    color="rgb(16,24,52)"
+                  >
+                    14 M
+                  </Heading>
+                  <Divider
+                    width="18rem"
+                    fontWeight="bold"
+                    fontFamily="body"
+                    borderColor="rgb(16,24,52)"
+                    borderWidth="1.2px"
+                  />
+                </Box>
+                <Box pt="1rem">
+                  <Text fontSize="xl" fontWeight="semibold">
+                    Presenters
+                  </Text>
+                </Box>
+              </VStack>
+
+              <VStack>
+                <Box>
+                  <Heading
+                    fontWeight="semibold"
+                    fontFamily="body"
+                    fontSize="6xl"
+                  >
+                    220+
+                  </Heading>
+                  <Divider
+                    width="18rem"
+                    fontWeight="bold"
+                    fontFamily="body"
+                    borderColor="rgb(16,24,52)"
+                    borderWidth="1.2px"
+                  />
+                </Box>
+                <Box pt="1rem">
+                  <Text fontSize="xl" fontWeight="semibold">
+                    Countries & territories
+                  </Text>
+                </Box>
+              </VStack>
+            </HStack>
           </Box>
         </VStack>
       </Stack>

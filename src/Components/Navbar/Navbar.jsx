@@ -1,4 +1,4 @@
-import { Box, HStack, Stack } from "@chakra-ui/react";
+import { Box, HStack, Stack, Divider } from "@chakra-ui/react";
 import React from "react";
 import Features from "./Features";
 import Solutions from "./Solutions";
@@ -86,11 +86,12 @@ const Navbar = () => {
               <Login />
             </Box>
             <Box>
-              <Signup />
+              <Signup width="5.5rem" fontSize="md" />
             </Box>
           </Box>
         </Box>
       </HStack>
+      <Divider pt="0.3rem" />
     </Stack>
   );
 };

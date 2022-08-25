@@ -1,16 +1,17 @@
 import { Button, Heading } from "@chakra-ui/react";
 import React from "react";
 
-const Signup = () => {
+const Signup = ({ width, height, fontSize }) => {
   return (
     <div>
       <Button
         variant="solid"
         colorScheme="messenger"
-        width="5.5rem"
+        width={width}
+        height={height}
         borderRadius={4}
       >
-        <Heading fontSize="md">Sign up</Heading>
+        <Heading fontSize={fontSize}>Sign up</Heading>
       </Button>
     </div>
   );

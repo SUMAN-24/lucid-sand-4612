@@ -27,7 +27,7 @@ const HomePage = () => {
             noOfLines={[2, 3, 4, 5, 6]}
             fontFamily="sans-serif"
             fontWeight="semibold"
-            color="#101834"
+            color="rgb(16,24,52)"
             textAlign="center"
           >
             <Text>Engage your audience &</Text>
@@ -166,7 +166,7 @@ const HomePage = () => {
       <Stack>
         <VStack>
           <Box mt="3.6rem">
-            <Heading fontFamily="sans-serif">
+            <Heading fontFamily="sans-serif" color="rgb(16,24,52)">
               <Text>Millions of voices have</Text>
               <Text> already been heard</Text>
             </Heading>

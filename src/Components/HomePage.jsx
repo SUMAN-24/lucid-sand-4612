@@ -57,8 +57,8 @@ const HomePage = () => {
         </VStack>
       </Stack>
 
-      <Stack mt="2rem">
-        <VStack backgroundColor="rgb(236,237,239)">
+      <Stack mt="2rem" height="42rem">
+        <VStack backgroundColor="rgb(236,237,239)" height="42rem">
           <Box mt="3rem">
             <Heading as="h2" color="blue" fontWeight="semibold" fontSize="3rem">
               What is Mentimeter?

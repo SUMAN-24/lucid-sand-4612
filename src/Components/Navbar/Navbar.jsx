@@ -8,13 +8,16 @@ import Enterprise from "./Enterprise";
 import Login from "./Login";
 import Signup from "./Signup";
 import Logo from "./Logo";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <Stack>
       <HStack>
         {/* Logo */}
-        <Logo mt="1.1rem" ml="5rem" />
+        <Link to="/">
+          <Logo mt="1.1rem" ml="5rem" />
+        </Link>
 
         {/* Sections */}
         <Box>
@@ -29,7 +32,14 @@ const Navbar = () => {
               <Resources />
             </Box>
             <Box>
-              <Pricing />
+              <NavLink
+                to="/plans"
+                style={({ isActive }) => ({
+                  color: isActive ? "blue" : "gray.30",
+                })}
+              >
+                <Pricing />
+              </NavLink>
             </Box>
             <Box>
               <Enterprise />

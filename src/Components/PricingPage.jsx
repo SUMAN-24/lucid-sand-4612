@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import Navbar from "./Navbar/Navbar";
-import Plan from "./Plan";
+import FreePlan from "./FreePlan";
 
 const PricingPage = () => {
   return (
@@ -41,7 +41,7 @@ const PricingPage = () => {
         </VStack>
       </Stack>
 
-      <Plan />
+      <FreePlan />
     </div>
   );
 };

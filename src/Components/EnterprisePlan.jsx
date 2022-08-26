@@ -1,33 +1,35 @@
+import React from "react";
 import {
   Box,
   Button,
   Heading,
+  HStack,
   List,
   ListIcon,
   ListItem,
   Text,
   VStack,
 } from "@chakra-ui/react";
-import React from "react";
 import { BsCheck2 } from "react-icons/bs";
 
-const FreePlan = () => {
+const EnterprisePlan = () => {
   return (
-    // <Stack>
     <VStack>
       <List textAlign="left">
-        <Box>
-          <Heading as="h3" fontWeight="semibold" fontSize="2xl">
-            Free
-          </Heading>
-        </Box>
+        <HStack gap="2rem">
+          <Box>
+            <Heading as="h3" fontWeight="semibold" fontSize="2xl">
+              Enterprise
+            </Heading>
+          </Box>
+        </HStack>
 
         <Box mt="0.6rem">
           <Text color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
-            For anyone trying out
+            For using Mentimeter in your
           </Text>
           <Text color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
-            Mentimeter.
+            team or organization.
           </Text>
         </Box>
 
@@ -35,59 +37,49 @@ const FreePlan = () => {
           <Heading
             fontWeight="semibold"
             fontFamily="body"
-            fontSize="5xl"
+            fontSize="4xl"
             color="rgb(16,24,52)"
           >
-            $0
+            Custom
           </Heading>
-          <Text
-            mt="0.5rem"
-            color="rgba(16, 24, 52, 0.75)"
-            fontSize="sm"
-            fontWeight="semibold"
-          >
-            No credit card needed
-          </Text>
         </Box>
 
         <Box>
           <Button
-            mt="2.5rem"
+            mt="5.2rem"
             width="13rem"
             height="3rem"
             backgroundColor="rgb(219,220,225)"
             _hover={{ backgroundColor: "gray" }}
           >
             <Text fontFamily="sans-serif" fontWeight="bold">
-              Get Started
+              Learn More
             </Text>
           </Button>
         </Box>
 
         <Box mt="1rem">
           <List textAlign="left">
-            <ListItem color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
-              <ListIcon as={BsCheck2} color="rgb(87,93,113)" />
-              Unlimited audience
+            <ListItem color="rgb(16,24,52)" fontWeight="semibold">
+              All Basic features, plus
             </ListItem>
             <ListItem color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
               <ListIcon as={BsCheck2} color="rgb(87,93,113)" />
-              Unlimited presentations
+              Create a team
             </ListItem>
             <ListItem color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
               <ListIcon as={BsCheck2} color="rgb(87,93,113)" />
-              Up to 2 question slides
+              Collaborate with others
             </ListItem>
             <ListItem color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
               <ListIcon as={BsCheck2} color="rgb(87,93,113)" />
-              Up to 5 quiz slides
+              Add your own branding
             </ListItem>
           </List>
         </Box>
       </List>
     </VStack>
-    // </Stack>
   );
 };
 
-export default FreePlan;
+export default EnterprisePlan;

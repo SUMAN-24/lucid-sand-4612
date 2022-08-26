@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Divider,
   Heading,
   HStack,
@@ -9,6 +10,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
+import Footer from "./Footer/Footer";
 import Navbar from "./Navbar/Navbar";
 import Signup from "./Navbar/Signup";
 
@@ -161,6 +163,22 @@ const HomePage = () => {
               </VStack>
             </HStack>
           </Box>
+
+          <Box pt="2rem">
+            <Button
+              size="md"
+              height="45px"
+              width="170px"
+              border="2px"
+              backgroundColor="rgb(236,237,239)"
+              borderColor="rgb(25, 108, 255)"
+              color="rgb(25, 108, 255)"
+              _hover={{ bgColor: "rgb(25, 108, 255)", color: "white" }}
+              fontFamily="sans-serif"
+            >
+              Explore Features
+            </Button>
+          </Box>
         </VStack>
       </Stack>
 
@@ -255,6 +273,56 @@ const HomePage = () => {
               </VStack>
             </HStack>
           </Box>
+
+          <Box pt="5rem" display="flex" mt="7rem" gap="6rem">
+            <Box ml="12rem" width="30%">
+              <Image
+                width="100%"
+                height="100%"
+                src="https://www.mentimeter.com/_next/static/media/andrew-hollo.3f3b1387.png"
+                alt="andrew-hollo"
+              />
+            </Box>
+            <Box pr="6rem" pt="-2rem">
+              <Heading
+                fontFamily="sans-serif"
+                fontSize="3xl"
+                fontWeight="semibold"
+                color="rgb(16,24,52)"
+                noOfLines={[4, 5, 6]}
+              >
+                <Text>"I can pose a question easily and</Text>
+                <Text> within a minute or two,have </Text>
+                <Text> aggregated responses from every</Text>
+                <Text> participant."</Text>
+              </Heading>
+              <br />
+              <Text
+                fontSize="xl"
+                fontWeight="semibold"
+                color="rgb(25, 108, 255)"
+              >
+                Andrew Hollo, Workwell Consulting
+              </Text>
+              <br />
+              <br />
+              <Button
+                size="md"
+                height="45px"
+                width="200px"
+                border="2px"
+                backgroundColor="white"
+                borderColor="rgb(25, 108, 255)"
+                color="rgb(25, 108, 255)"
+                _hover={{ bgColor: "rgb(25, 108, 255)", color: "white" }}
+                fontFamily="sans-serif"
+              >
+                Explore More Stories
+              </Button>
+            </Box>
+          </Box>
+
+          <Footer />
         </VStack>
       </Stack>
     </div>

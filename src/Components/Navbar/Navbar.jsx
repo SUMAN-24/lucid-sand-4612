@@ -10,7 +10,7 @@ import Signup from "./Signup";
 import Logo from "./Logo";
 import { Link, NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ display }) => {
   return (
     <Stack>
       <HStack>
@@ -55,7 +55,7 @@ const Navbar = () => {
               <Login />
             </Box>
             <Box>
-              <Signup width="5.5rem" fontSize="md" />
+              <Signup width="5.5rem" fontSize="md" display={display} />
             </Box>
           </Box>
         </Box>

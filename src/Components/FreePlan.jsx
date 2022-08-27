@@ -10,11 +10,12 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { BsCheck2 } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const FreePlan = () => {
+const FreePlan = ({ display }) => {
+  const navigate = useNavigate();
+
   return (
-    // <Stack>
     <VStack>
       <List textAlign="left">
         <Box>
@@ -58,9 +59,12 @@ const FreePlan = () => {
             height="3rem"
             backgroundColor="rgb(219,220,225)"
             _hover={{ backgroundColor: "gray" }}
+            onClick={() => {
+              navigate(`/signup?referral=${display}`);
+            }}
           >
             <Text fontFamily="sans-serif" fontWeight="bold">
-              <Link to="/signup"> Get Started</Link>
+              Get Started
             </Text>
           </Button>
         </Box>
@@ -87,7 +91,6 @@ const FreePlan = () => {
         </Box>
       </List>
     </VStack>
-    // </Stack>
   );
 };
 

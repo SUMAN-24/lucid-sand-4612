@@ -18,9 +18,11 @@ import EnterprisePlan from "./EnterprisePlan";
 import Footer from "./Footer/Footer";
 
 const PricingPage = () => {
+  const text = "plans";
+
   return (
     <div>
-      <Navbar />
+      <Navbar display={text} />
 
       <Stack mt="4rem">
         <VStack>
@@ -56,7 +58,7 @@ const PricingPage = () => {
       <Stack alignItems="center">
         <HStack mt="2rem" gap="1.5rem">
           <Box>
-            <FreePlan />
+            <FreePlan display={text} />
           </Box>
           <Box>
             <Divider

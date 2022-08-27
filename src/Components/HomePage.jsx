@@ -15,10 +15,12 @@ import Navbar from "./Navbar/Navbar";
 import Signup from "./Navbar/Signup";
 
 const HomePage = () => {
+  const text = "homepage";
+
   return (
     <div>
       {/* navbar */}
-      <Navbar />
+      <Navbar display={text} />
 
       {/* start of homepage */}
       <Stack mt="4rem">
@@ -45,7 +47,12 @@ const HomePage = () => {
           </Box>
 
           <Box pt="2rem">
-            <Signup width="8rem" height="3.5rem" fontSize="2xl" />
+            <Signup
+              width="8rem"
+              height="3.5rem"
+              fontSize="2xl"
+              display="homepage"
+            />
           </Box>
 
           <Box>

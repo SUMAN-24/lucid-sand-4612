@@ -1,14 +1,28 @@
-import { Box, Heading, Stack, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Divider,
+  Heading,
+  HStack,
+  Stack,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 
 import Navbar from "./Navbar/Navbar";
 import FreePlan from "./FreePlan";
+import BasicPlan from "./BasicPlan";
+import ProPlan from "./ProPlan";
+import EnterprisePlan from "./EnterprisePlan";
+import Footer from "./Footer/Footer";
 
 const PricingPage = () => {
+  const text = "plans";
+
   return (
     <div>
-      <Navbar />
+      <Navbar display={text} />
 
       <Stack mt="4rem">
         <VStack>
@@ -41,7 +55,53 @@ const PricingPage = () => {
         </VStack>
       </Stack>
 
-      <FreePlan />
+      <Stack alignItems="center">
+        <HStack mt="2rem" gap="1.5rem">
+          <Box>
+            <FreePlan display={text} />
+          </Box>
+          <Box>
+            <Divider
+              orientation="vertical"
+              height="24rem"
+              fontWeight="bold"
+              fontFamily="body"
+              borderColor="rgb(16,24,52)"
+              borderWidth="1px"
+            />
+          </Box>
+          <Box>
+            <BasicPlan />
+          </Box>
+          <Box>
+            <Divider
+              orientation="vertical"
+              height="24rem"
+              fontWeight="bold"
+              fontFamily="body"
+              borderColor="rgb(16,24,52)"
+              borderWidth="1px"
+            />
+          </Box>
+          <Box>
+            <ProPlan />
+          </Box>
+          <Box>
+            <Divider
+              orientation="vertical"
+              height="24rem"
+              fontWeight="bold"
+              fontFamily="body"
+              borderColor="rgb(16,24,52)"
+              borderWidth="1px"
+            />
+          </Box>
+          <Box>
+            <EnterprisePlan />
+          </Box>
+        </HStack>
+      </Stack>
+      <Footer />
     </div>
   );
 };

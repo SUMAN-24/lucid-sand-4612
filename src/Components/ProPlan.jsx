@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   Heading,
+  HStack,
   List,
   ListIcon,
   ListItem,
@@ -13,23 +14,61 @@ import {
 } from "@chakra-ui/react";
 import { BsCheck2 } from "react-icons/bs";
 
-const BasicPlan = () => {
+const ProPlan = () => {
   return (
-    // <Stack>
     <VStack>
       <List textAlign="left">
-        <Box>
-          <Heading as="h3" fontWeight="semibold" fontSize="2xl">
-            Basic
-          </Heading>
-        </Box>
+        <HStack gap="2rem">
+          <Box>
+            <Heading as="h3" fontWeight="semibold" fontSize="2xl">
+              Pro
+            </Heading>
+          </Box>
+          <Box textAlign="center">
+            <Badge
+              variant="solid"
+              colorScheme="messenger"
+              color="white"
+              height="28px"
+              width="8rem"
+              borderRadius="2rem"
+              pt="0.3rem"
+            >
+              Recommended
+            </Badge>
+          </Box>
+        </HStack>
 
         <Box mt="0.6rem">
           <Text color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
-            All the essentials for
+            Full access to all features for
           </Text>
-          <Text color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
-            interactive presentations.
+          <Text
+            color="rgba(16, 24, 52, 0.75)"
+            fontWeight="semibold"
+            display="flex"
+          >
+            individuals or{" "}
+            <Tooltip
+              width="13rem"
+              height="7.6rem"
+              hasArrow
+              placement="top"
+              label="Organize your presenters into a common workspace with shared presentation templates and centralized billing. Price per presenter"
+              bg="blackAlpha.900"
+              color="white"
+              textAlign="match-parent"
+              pt="0.5rem"
+              pl="1rem"
+            >
+              <Text
+                textDecorationLine="underline"
+                cursor="help"
+                fontWeight="bold"
+              >
+                teams.
+              </Text>
+            </Tooltip>
           </Text>
         </Box>
 
@@ -40,7 +79,7 @@ const BasicPlan = () => {
             fontSize="5xl"
             color="rgb(16,24,52)"
           >
-            $11
+            $24
             <Text as="sup" fontSize="1.8rem">
               99<Text as="sub">/month</Text>
             </Text>
@@ -51,18 +90,7 @@ const BasicPlan = () => {
             fontSize="sm"
             fontWeight="semibold"
           >
-            Billed Yearly{" "}
-            <Badge
-              variant="subtle"
-              backgroundColor="rgb(229,247,241)"
-              color="green"
-              height="23px"
-              textAlign="center"
-              borderRadius="4px"
-              width="4.5rem"
-            >
-              SAVE33%
-            </Badge>
+            Billed Yearly
             <Box display="flex">
               <Text>Price per </Text>
 
@@ -97,11 +125,11 @@ const BasicPlan = () => {
             mt="1rem"
             width="13rem"
             height="3rem"
-            backgroundColor="rgb(219,220,225)"
-            _hover={{ backgroundColor: "gray" }}
+            colorScheme="messenger"
+            _hover={{ backgroundColor: "blue" }}
           >
             <Text fontFamily="sans-serif" fontWeight="bold">
-              Buy Basic
+              Buy Pro
             </Text>
           </Button>
         </Box>
@@ -109,26 +137,25 @@ const BasicPlan = () => {
         <Box mt="1rem">
           <List textAlign="left">
             <ListItem color="rgb(16,24,52)" fontWeight="semibold">
-              All Free features, plus
+              All Basic features, plus
             </ListItem>
             <ListItem color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
-              <ListIcon as={BsCheck2} color="rgb(87,93,113)" />
-              Unlimited questions
+              <ListIcon as={BsCheck2} color="royalblue" />
+              Create a team
             </ListItem>
             <ListItem color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
-              <ListIcon as={BsCheck2} color="rgb(87,93,113)" />
-              Import presentations
+              <ListIcon as={BsCheck2} color="royalblue" />
+              Collaborate with others
             </ListItem>
             <ListItem color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
-              <ListIcon as={BsCheck2} color="rgb(87,93,113)" />
-              Export results to Excel
+              <ListIcon as={BsCheck2} color="royalblue" />
+              Add your own branding
             </ListItem>
           </List>
         </Box>
       </List>
     </VStack>
-    // </Stack>
   );
 };
 
-export default BasicPlan;
+export default ProPlan;

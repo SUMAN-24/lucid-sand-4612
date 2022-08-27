@@ -20,7 +20,15 @@ const HomePage = () => {
   return (
     <div>
       {/* navbar */}
-      <Navbar display={text} />
+      <Navbar
+        display={text}
+        style={{
+          position: "sticky",
+          top: 0,
+          backgroundColor: "rgb(255,255,255",
+          zIndex: 1,
+        }}
+      />
 
       {/* start of homepage */}
       <Stack mt="4rem">

@@ -10,9 +10,9 @@ import Signup from "./Signup";
 import Logo from "./Logo";
 import { Link, NavLink } from "react-router-dom";
 
-const Navbar = ({ display }) => {
+const Navbar = ({ display, style }) => {
   return (
-    <Stack>
+    <Stack style={style}>
       <HStack>
         {/* Logo */}
         <Link to="/">

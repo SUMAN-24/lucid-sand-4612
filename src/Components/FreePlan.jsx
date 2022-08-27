@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { BsCheck2 } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const FreePlan = () => {
   return (
@@ -59,7 +60,7 @@ const FreePlan = () => {
             _hover={{ backgroundColor: "gray" }}
           >
             <Text fontFamily="sans-serif" fontWeight="bold">
-              Get Started
+              <Link to="/signup"> Get Started</Link>
             </Text>
           </Button>
         </Box>

@@ -205,7 +205,7 @@ const Footer = () => {
                     borderWidth="1px"
                   />
                 </Box>
-                <Box pl="1rem">
+                <Box pl="0.8rem">
                   <List textAlign="left">
                     <ListItem _hover={{ color: "gray", cursor: "pointer" }}>
                       <Text fontWeight="semibold" fontSize="lg" color="gray.45">
@@ -233,7 +233,11 @@ const Footer = () => {
                       </Text>
                     </ListItem>
                     <ListItem _hover={{ color: "gray", cursor: "pointer" }}>
-                      <Text fontWeight="semibold" fontSize="lg" color="gray.45">
+                      <Text
+                        fontWeight="semibold"
+                        fontSize="1.1rem"
+                        color="gray.45"
+                      >
                         Contact us
                       </Text>
                     </ListItem>

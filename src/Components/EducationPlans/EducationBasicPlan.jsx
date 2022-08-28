@@ -33,11 +33,28 @@ const EducationBasicPlan = () => {
         </Box>
 
         <Box mt="1.5rem">
+          <Text as="s" mt="0.5rem" color="gray" fontSize="sm" fontWeight="bold">
+            $11.99/month{" "}
+            <Badge
+              variant="subtle"
+              backgroundColor="rgb(229,247,241)"
+              color="green"
+              height="23px"
+              textAlign="center"
+              borderRadius="4px"
+              width="6.8rem"
+              padding="0.1rem"
+              ml="0.5rem"
+            >
+              30% DISCOUNT
+            </Badge>
+          </Text>
           <Heading
             fontWeight="semibold"
             fontFamily="body"
             fontSize="5xl"
             color="rgb(16,24,52)"
+            mt="-0.9rem"
           >
             $8
             <Text as="sup" fontSize="1.8rem">
@@ -59,6 +76,7 @@ const EducationBasicPlan = () => {
               textAlign="center"
               borderRadius="4px"
               width="4.5rem"
+              padding="0.1rem"
             >
               SAVE33%
             </Badge>

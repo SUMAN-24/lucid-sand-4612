@@ -74,7 +74,7 @@ const EducationPlanPage = () => {
           <Box>
             <Divider
               orientation="vertical"
-              height="24rem"
+              height="25rem"
               fontWeight="bold"
               fontFamily="body"
               borderColor="rgb(16,24,52)"
@@ -87,7 +87,7 @@ const EducationPlanPage = () => {
           <Box>
             <Divider
               orientation="vertical"
-              height="24rem"
+              height="25rem"
               fontWeight="bold"
               fontFamily="body"
               borderColor="rgb(16,24,52)"
@@ -100,7 +100,7 @@ const EducationPlanPage = () => {
           <Box>
             <Divider
               orientation="vertical"
-              height="24rem"
+              height="25rem"
               fontWeight="bold"
               fontFamily="body"
               borderColor="rgb(16,24,52)"

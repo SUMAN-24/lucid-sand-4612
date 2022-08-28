@@ -54,11 +54,28 @@ const EducationProPlan = () => {
         </Box>
 
         <Box mt="1.5rem">
+          <Text as="s" mt="0.5rem" color="gray" fontSize="sm" fontWeight="bold">
+            $24.99/month{" "}
+            <Badge
+              variant="subtle"
+              backgroundColor="rgb(229,247,241)"
+              color="green"
+              height="23px"
+              textAlign="center"
+              borderRadius="4px"
+              width="6.8rem"
+              padding="0.1rem"
+              ml="0.5rem"
+            >
+              40% DISCOUNT
+            </Badge>
+          </Text>
           <Heading
             fontWeight="semibold"
             fontFamily="body"
             fontSize="5xl"
             color="rgb(16,24,52)"
+            mt="-0.9rem"
           >
             $14
             <Text as="sup" fontSize="1.8rem">

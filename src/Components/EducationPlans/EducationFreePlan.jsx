@@ -39,6 +39,7 @@ const EducationFreePlan = ({ display }) => {
             fontFamily="body"
             fontSize="5xl"
             color="rgb(16,24,52)"
+            pt="0.5rem"
           >
             $0
           </Heading>

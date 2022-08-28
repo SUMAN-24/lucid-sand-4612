@@ -193,7 +193,7 @@ const Footer = () => {
               </VStack>
 
               <VStack pl="3rem">
-                <Box mt="-8rem">
+                <Box mt="-10rem">
                   <Heading as="h3" fontSize="lg">
                     About us
                   </Heading>

@@ -11,13 +11,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import Navbar from "./Navbar/Navbar";
-import FreePlan from "./FreePlan";
-import BasicPlan from "./BasicPlan";
-import ProPlan from "./ProPlan";
-import EnterprisePlan from "./EnterprisePlan";
 import Footer from "./Footer/Footer";
+import EducationBasicPlan from "./EducationPlans/EducationBasicPlan";
+import EducationFreePlan from "./EducationPlans/EducationFreePlan";
+import EducationProPlan from "./EducationPlans/EducationProPlan";
+import EducationCampusPlan from "./EducationPlans/EducationCampusPlan";
 
-const PricingPage = () => {
+const EducationPlanPage = () => {
   const text = "plans";
 
   return (
@@ -44,7 +44,7 @@ const PricingPage = () => {
             color="rgb(16,24,52)"
             textAlign="center"
           >
-            <Text>Give everyone a voice</Text>
+            <Text>Boost engagement in the classroom</Text>
             <Text>with the plan that’s right for you</Text>
           </Heading>
 
@@ -54,11 +54,11 @@ const PricingPage = () => {
             fontSize="22px"
           >
             <Text display="flex" gap="0.3rem">
-              Are you a teacher or a student? Take a look at our
-              <Link color="blue" to="/plans/education">
+              Not a teacher or student? See Mentimeter
+              <Link color="blue" to="/plans">
                 <Text color="blue" textDecoration="underline">
                   {" "}
-                  prices for Education
+                  for Professionals
                 </Text>
               </Link>
             </Text>
@@ -69,7 +69,7 @@ const PricingPage = () => {
       <Stack alignItems="center">
         <HStack mt="2rem" gap="1.5rem">
           <Box>
-            <FreePlan display={text} />
+            <EducationFreePlan display={text} />
           </Box>
           <Box>
             <Divider
@@ -82,7 +82,7 @@ const PricingPage = () => {
             />
           </Box>
           <Box>
-            <BasicPlan />
+            <EducationBasicPlan />
           </Box>
           <Box>
             <Divider
@@ -95,7 +95,7 @@ const PricingPage = () => {
             />
           </Box>
           <Box>
-            <ProPlan />
+            <EducationProPlan />
           </Box>
           <Box>
             <Divider
@@ -108,7 +108,7 @@ const PricingPage = () => {
             />
           </Box>
           <Box>
-            <EnterprisePlan />
+            <EducationCampusPlan />
           </Box>
         </HStack>
       </Stack>
@@ -117,4 +117,4 @@ const PricingPage = () => {
   );
 };
 
-export default PricingPage;
+export default EducationPlanPage;

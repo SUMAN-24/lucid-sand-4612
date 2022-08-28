@@ -42,7 +42,14 @@ const Navbar = ({ display, style }) => {
               </NavLink>
             </Box>
             <Box>
-              <Enterprise />
+              <NavLink
+                to="/enterprise"
+                style={({ isActive }) => ({
+                  color: isActive ? "blue" : "gray.30",
+                })}
+              >
+                <Enterprise />
+              </NavLink>
             </Box>
           </Box>
         </Box>

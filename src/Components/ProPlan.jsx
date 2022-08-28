@@ -47,6 +47,7 @@ const ProPlan = () => {
             color="rgba(16, 24, 52, 0.75)"
             fontWeight="semibold"
             display="flex"
+            gap="0.2rem"
           >
             individuals or{" "}
             <Tooltip
@@ -91,7 +92,7 @@ const ProPlan = () => {
             fontWeight="semibold"
           >
             Billed Yearly
-            <Box display="flex">
+            <Box display="flex" gap="0.2rem">
               <Text>Price per </Text>
 
               <Tooltip

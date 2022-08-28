@@ -11,8 +11,11 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { BsCheck2 } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const EnterprisePlan = () => {
+  const navigate = useNavigate();
+
   return (
     <VStack>
       <List textAlign="left">
@@ -51,6 +54,9 @@ const EnterprisePlan = () => {
             height="3rem"
             backgroundColor="rgb(219,220,225)"
             _hover={{ backgroundColor: "gray" }}
+            onClick={() => {
+              navigate(`/enterprise`);
+            }}
           >
             <Text fontFamily="sans-serif" fontWeight="bold">
               Learn More
@@ -61,19 +67,19 @@ const EnterprisePlan = () => {
         <Box mt="1rem">
           <List textAlign="left">
             <ListItem color="rgb(16,24,52)" fontWeight="semibold">
-              All Basic features, plus
+              All Pro features, plus
             </ListItem>
             <ListItem color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
               <ListIcon as={BsCheck2} color="rgb(87,93,113)" />
-              Create a team
+              Company-wide branding
             </ListItem>
             <ListItem color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
               <ListIcon as={BsCheck2} color="rgb(87,93,113)" />
-              Collaborate with others
+              Single Sign-On
             </ListItem>
             <ListItem color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
               <ListIcon as={BsCheck2} color="rgb(87,93,113)" />
-              Add your own branding
+              Success manager
             </ListItem>
           </List>
         </Box>

@@ -63,7 +63,7 @@ const BasicPlan = () => {
             >
               SAVE33%
             </Badge>
-            <Box display="flex">
+            <Box display="flex" gap="0.2rem">
               <Text>Price per </Text>
 
               <Tooltip

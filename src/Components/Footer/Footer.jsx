@@ -148,7 +148,7 @@ const Footer = () => {
                 </Box>
               </VStack>
 
-              <VStack pl="3rem">
+              <VStack pl="2rem">
                 <Box mt="-12.7rem">
                   <Heading as="h3" fontSize="lg">
                     Details
@@ -158,7 +158,7 @@ const Footer = () => {
                     fontWeight="bold"
                     fontFamily="body"
                     borderColor="rgb(16,24,52)"
-                    borderWidth="1.2px"
+                    borderWidth="1px"
                   />
                 </Box>
                 <Box pl="1.5rem">

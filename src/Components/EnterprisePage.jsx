@@ -34,17 +34,17 @@ const EnterprisePage = () => {
 
   return (
     <Stack>
-      <VStack>
-        <Navbar
-          display={text}
-          style={{
-            position: "sticky",
-            top: 0,
-            backgroundColor: "rgb(255,255,255",
-            zIndex: 1,
-          }}
-        />
+      <Navbar
+        display={text}
+        style={{
+          position: "sticky",
+          top: 0,
+          backgroundColor: "rgb(255,255,255",
+          zIndex: 1,
+        }}
+      />
 
+      <VStack>
         <Box display="flex">
           <Box ml="5rem" pt="3rem">
             <VStack>

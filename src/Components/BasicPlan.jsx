@@ -60,10 +60,11 @@ const BasicPlan = () => {
               textAlign="center"
               borderRadius="4px"
               width="4.5rem"
+              padding="0.1rem"
             >
               SAVE33%
             </Badge>
-            <Box display="flex">
+            <Box display="flex" gap="0.2rem">
               <Text>Price per </Text>
 
               <Tooltip

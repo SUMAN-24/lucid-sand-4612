@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { BsCheck2 } from "react-icons/bs";
 
-const ProPlan = () => {
+const EducationProPlan = () => {
   return (
     <VStack>
       <List textAlign="left">
@@ -41,7 +41,7 @@ const ProPlan = () => {
 
         <Box mt="0.6rem">
           <Text color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
-            Full access to all features for
+            All the power to customize
           </Text>
           <Text
             color="rgba(16, 24, 52, 0.75)"
@@ -49,38 +49,35 @@ const ProPlan = () => {
             display="flex"
             gap="0.2rem"
           >
-            individuals or{" "}
-            <Tooltip
-              width="13rem"
-              height="7.6rem"
-              hasArrow
-              placement="top"
-              label="Organize your presenters into a common workspace with shared presentation templates and centralized billing. Price per presenter"
-              bg="blackAlpha.900"
-              color="white"
-              textAlign="match-parent"
-              pt="0.5rem"
-              pl="1rem"
-            >
-              <Text
-                textDecorationLine="underline"
-                cursor="help"
-                fontWeight="bold"
-              >
-                teams.
-              </Text>
-            </Tooltip>
+            your presentations.
           </Text>
         </Box>
 
         <Box mt="1.5rem">
+          <Text as="s" mt="0.5rem" color="gray" fontSize="sm" fontWeight="bold">
+            $24.99/month{" "}
+            <Badge
+              variant="subtle"
+              backgroundColor="rgb(229,247,241)"
+              color="green"
+              height="23px"
+              textAlign="center"
+              borderRadius="4px"
+              width="6.8rem"
+              padding="0.1rem"
+              ml="0.5rem"
+            >
+              40% DISCOUNT
+            </Badge>
+          </Text>
           <Heading
             fontWeight="semibold"
             fontFamily="body"
             fontSize="5xl"
             color="rgb(16,24,52)"
+            mt="-0.9rem"
           >
-            $24
+            $14
             <Text as="sup" fontSize="1.8rem">
               99<Text as="sub">/month</Text>
             </Text>
@@ -159,4 +156,4 @@ const ProPlan = () => {
   );
 };
 
-export default ProPlan;
+export default EducationProPlan;

@@ -13,7 +13,7 @@ import {
 import { BsCheck2 } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
-const EnterprisePlan = () => {
+const EducationCampusPlan = () => {
   const navigate = useNavigate();
 
   return (
@@ -22,17 +22,20 @@ const EnterprisePlan = () => {
         <HStack gap="2rem">
           <Box>
             <Heading as="h3" fontWeight="semibold" fontSize="2xl">
-              Enterprise
+              Campus
             </Heading>
           </Box>
         </HStack>
 
         <Box mt="0.6rem">
           <Text color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
-            For using Mentimeter in your
+            An Enterprise solution
           </Text>
           <Text color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
-            team or organization.
+            tailored to your educational
+          </Text>
+          <Text color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
+            organization.
           </Text>
         </Box>
 
@@ -49,7 +52,7 @@ const EnterprisePlan = () => {
 
         <Box>
           <Button
-            mt="5.2rem"
+            mt="3.7rem"
             width="13rem"
             height="3rem"
             backgroundColor="rgb(219,220,225)"
@@ -71,11 +74,11 @@ const EnterprisePlan = () => {
             </ListItem>
             <ListItem color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
               <ListIcon as={BsCheck2} color="rgb(87,93,113)" />
-              Company-wide branding
+              Single Sign-On
             </ListItem>
             <ListItem color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
               <ListIcon as={BsCheck2} color="rgb(87,93,113)" />
-              Single Sign-On
+              Shared templates
             </ListItem>
             <ListItem color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
               <ListIcon as={BsCheck2} color="rgb(87,93,113)" />
@@ -88,4 +91,4 @@ const EnterprisePlan = () => {
   );
 };
 
-export default EnterprisePlan;
+export default EducationCampusPlan;

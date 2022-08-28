@@ -148,7 +148,7 @@ const Footer = () => {
                 </Box>
               </VStack>
 
-              <VStack pl="3rem">
+              <VStack pl="2rem">
                 <Box mt="-12.7rem">
                   <Heading as="h3" fontSize="lg">
                     Details
@@ -158,7 +158,7 @@ const Footer = () => {
                     fontWeight="bold"
                     fontFamily="body"
                     borderColor="rgb(16,24,52)"
-                    borderWidth="1.2px"
+                    borderWidth="1px"
                   />
                 </Box>
                 <Box pl="1.5rem">
@@ -193,7 +193,7 @@ const Footer = () => {
               </VStack>
 
               <VStack pl="3rem">
-                <Box mt="-8rem">
+                <Box mt="-10rem">
                   <Heading as="h3" fontSize="lg">
                     About us
                   </Heading>
@@ -205,7 +205,7 @@ const Footer = () => {
                     borderWidth="1px"
                   />
                 </Box>
-                <Box pl="1rem">
+                <Box pl="0.8rem">
                   <List textAlign="left">
                     <ListItem _hover={{ color: "gray", cursor: "pointer" }}>
                       <Text fontWeight="semibold" fontSize="lg" color="gray.45">
@@ -233,7 +233,11 @@ const Footer = () => {
                       </Text>
                     </ListItem>
                     <ListItem _hover={{ color: "gray", cursor: "pointer" }}>
-                      <Text fontWeight="semibold" fontSize="lg" color="gray.45">
+                      <Text
+                        fontWeight="semibold"
+                        fontSize="1.1rem"
+                        color="gray.45"
+                      >
                         Contact us
                       </Text>
                     </ListItem>

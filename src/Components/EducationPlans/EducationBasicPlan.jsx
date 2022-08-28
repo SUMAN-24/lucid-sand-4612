@@ -4,7 +4,6 @@ import {
   Box,
   Button,
   Heading,
-  HStack,
   List,
   ListIcon,
   ListItem,
@@ -14,73 +13,50 @@ import {
 } from "@chakra-ui/react";
 import { BsCheck2 } from "react-icons/bs";
 
-const ProPlan = () => {
+const EducationBasicPlan = () => {
   return (
     <VStack>
       <List textAlign="left">
-        <HStack gap="2rem">
-          <Box>
-            <Heading as="h3" fontWeight="semibold" fontSize="2xl">
-              Pro
-            </Heading>
-          </Box>
-          <Box textAlign="center">
-            <Badge
-              variant="solid"
-              colorScheme="messenger"
-              color="white"
-              height="28px"
-              width="8rem"
-              borderRadius="2rem"
-              pt="0.3rem"
-            >
-              Recommended
-            </Badge>
-          </Box>
-        </HStack>
+        <Box>
+          <Heading as="h3" fontWeight="semibold" fontSize="2xl">
+            Basic
+          </Heading>
+        </Box>
 
         <Box mt="0.6rem">
           <Text color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
-            Full access to all features for
+            The essentials for engaging
           </Text>
-          <Text
-            color="rgba(16, 24, 52, 0.75)"
-            fontWeight="semibold"
-            display="flex"
-            gap="0.2rem"
-          >
-            individuals or{" "}
-            <Tooltip
-              width="13rem"
-              height="7.6rem"
-              hasArrow
-              placement="top"
-              label="Organize your presenters into a common workspace with shared presentation templates and centralized billing. Price per presenter"
-              bg="blackAlpha.900"
-              color="white"
-              textAlign="match-parent"
-              pt="0.5rem"
-              pl="1rem"
-            >
-              <Text
-                textDecorationLine="underline"
-                cursor="help"
-                fontWeight="bold"
-              >
-                teams.
-              </Text>
-            </Tooltip>
+          <Text color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
+            your students.
           </Text>
         </Box>
 
         <Box mt="1.5rem">
+          <Text as="s" mt="0.5rem" color="gray" fontSize="sm" fontWeight="bold">
+            $11.99/month{" "}
+            <Badge
+              variant="subtle"
+              backgroundColor="rgb(229,247,241)"
+              color="green"
+              height="23px"
+              textAlign="center"
+              borderRadius="4px"
+              width="6.8rem"
+              padding="0.1rem"
+              ml="0.5rem"
+            >
+              30% DISCOUNT
+            </Badge>
+          </Text>
           <Heading
             fontWeight="semibold"
             fontFamily="body"
             fontSize="5xl"
             color="rgb(16,24,52)"
+            mt="-0.9rem"
           >
-            $24
+            $8
             <Text as="sup" fontSize="1.8rem">
               99<Text as="sub">/month</Text>
             </Text>
@@ -91,7 +67,19 @@ const ProPlan = () => {
             fontSize="sm"
             fontWeight="semibold"
           >
-            Billed Yearly
+            Billed Yearly{" "}
+            <Badge
+              variant="subtle"
+              backgroundColor="rgb(229,247,241)"
+              color="green"
+              height="23px"
+              textAlign="center"
+              borderRadius="4px"
+              width="4.5rem"
+              padding="0.1rem"
+            >
+              SAVE33%
+            </Badge>
             <Box display="flex" gap="0.2rem">
               <Text>Price per </Text>
 
@@ -126,11 +114,11 @@ const ProPlan = () => {
             mt="1rem"
             width="13rem"
             height="3rem"
-            colorScheme="messenger"
-            _hover={{ backgroundColor: "blue" }}
+            backgroundColor="rgb(219,220,225)"
+            _hover={{ backgroundColor: "gray" }}
           >
             <Text fontFamily="sans-serif" fontWeight="bold">
-              Buy Pro
+              Buy Basic
             </Text>
           </Button>
         </Box>
@@ -138,19 +126,19 @@ const ProPlan = () => {
         <Box mt="1rem">
           <List textAlign="left">
             <ListItem color="rgb(16,24,52)" fontWeight="semibold">
-              All Basic features, plus
+              All Free features, plus
             </ListItem>
             <ListItem color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
-              <ListIcon as={BsCheck2} color="royalblue" />
-              Create a team
+              <ListIcon as={BsCheck2} color="rgb(87,93,113)" />
+              Unlimited questions
             </ListItem>
             <ListItem color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
-              <ListIcon as={BsCheck2} color="royalblue" />
-              Collaborate with others
+              <ListIcon as={BsCheck2} color="rgb(87,93,113)" />
+              Import presentations
             </ListItem>
             <ListItem color="rgba(16, 24, 52, 0.75)" fontWeight="semibold">
-              <ListIcon as={BsCheck2} color="royalblue" />
-              Add your own branding
+              <ListIcon as={BsCheck2} color="rgb(87,93,113)" />
+              Export results to Excel
             </ListItem>
           </List>
         </Box>
@@ -159,4 +147,4 @@ const ProPlan = () => {
   );
 };
 
-export default ProPlan;
+export default EducationBasicPlan;

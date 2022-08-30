@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import EducationPlanPage from "../Components/EducationPlanPage";
 import EnterprisePage from "../Components/EnterprisePage";
+import ForgotPasswordPage from "../Components/ForgotPasswordPage";
 import HomePage from "../Components/HomePage";
 import LoginPage from "../Components/LoginPage";
 import PricingPage from "../Components/PricingPage";
@@ -17,6 +18,7 @@ const AllRoutes = () => {
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/enterprise" element={<EnterprisePage />} />
         <Route path="/plans/education" element={<EducationPlanPage />} />
+        <Route path="/auth/reset_passwords" element={<ForgotPasswordPage />} />
       </Routes>
     </div>
   );

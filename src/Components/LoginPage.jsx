@@ -13,6 +13,7 @@ import {
   HStack,
   InputGroup,
   InputRightElement,
+  useToast,
 } from "@chakra-ui/react";
 import React, { useContext, useState } from "react";
 import Logo from "./Navbar/Logo";
@@ -24,6 +25,7 @@ import FacebookLoginComponent from "../FacebookLoginComponent";
 const LoginPage = () => {
   const [input, setInput] = useState("");
 
+  const toast = useToast();
   //const handleInputChange = (e) => setInput(e.target.value);
 
   const isError = input === "";
@@ -31,8 +33,8 @@ const LoginPage = () => {
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
 
-  const loginDetails = (formState) => {
-    return fetch("https://reqres.in/api/login", {
+  const loginDetails = async (formState) => {
+    return await fetch("https://reqres.in/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -66,8 +68,25 @@ const LoginPage = () => {
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
-        authDetails.loginUser(res.token);
-        navigate("/plans");
+        if (res.token) {
+          authDetails.loginUser(res.token);
+          toast({
+            title: "Logged in Successfully.",
+            // description: "We've created your account for you.",
+            status: "success",
+            duration: 2000,
+            isClosable: true,
+          });
+          navigate("/app");
+        } else {
+          toast({
+            title: "Enter correct Credentials.",
+            description: res.error,
+            status: "error",
+            duration: 2000,
+            isClosable: true,
+          });
+        }
       })
       .catch((err) => console.log(err));
   };
@@ -151,7 +170,7 @@ const LoginPage = () => {
             </FormLabel>
             <Input
               type="email"
-              value={formState.email}
+              // value={formState.email}
               name="email"
               onChange={handleChange}
               width="22.5rem"
@@ -178,7 +197,7 @@ const LoginPage = () => {
             <InputGroup size="md">
               <Input
                 pr="4.5rem"
-                value={formState.password}
+                // value={formState.password}
                 name="password"
                 type={show ? "text" : "password"}
                 onChange={handleChange}

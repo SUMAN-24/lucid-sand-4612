@@ -5,8 +5,10 @@ import EnterprisePage from "../Components/EnterprisePage";
 import ForgotPasswordPage from "../Components/ForgotPasswordPage";
 import HomePage from "../Components/HomePage";
 import LoginPage from "../Components/LoginPage";
+import PresentationsPage from "../Components/PresentationsPage";
 import PricingPage from "../Components/PricingPage";
 import SignUpPage from "../Components/SignUpPage";
+import PrivateRoute from "../hoc/PrivateRoute";
 
 const AllRoutes = () => {
   return (
@@ -19,6 +21,14 @@ const AllRoutes = () => {
         <Route path="/enterprise" element={<EnterprisePage />} />
         <Route path="/plans/education" element={<EducationPlanPage />} />
         <Route path="/auth/reset_passwords" element={<ForgotPasswordPage />} />
+        <Route
+          path="/app"
+          element={
+            <PrivateRoute>
+              <PresentationsPage />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </div>
   );

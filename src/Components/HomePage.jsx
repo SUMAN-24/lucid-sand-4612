@@ -25,7 +25,7 @@ const HomePage = () => {
         style={{
           position: "sticky",
           top: 0,
-          backgroundColor: "rgb(255,255,255",
+          backgroundColor: "rgb(255,255,255)",
           zIndex: 1,
         }}
       />

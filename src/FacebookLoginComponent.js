@@ -62,7 +62,7 @@ function FacebookLoginComponent() {
         />
       )}
 
-      {login && navigate("/plans")}
+      {login && navigate("/app")}
       {/* {login && (
         <div className="card">
           <div className="card-body">

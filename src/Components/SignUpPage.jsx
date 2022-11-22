@@ -18,6 +18,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./Navbar/Logo";
 import { BsFacebook, BsGoogle } from "react-icons/bs";
+import FacebookLoginComponent from "../FacebookLoginComponent";
 
 const SignUpPage = () => {
   const [input, setInput] = useState("");
@@ -48,10 +49,11 @@ const SignUpPage = () => {
           </Heading>
         </Box>
         <Box pt="2rem">
-          <Button colorScheme="facebook" width="22.5rem" gap="1rem">
+          {/* <Button colorScheme="facebook" width="22.5rem" gap="1rem">
             <BsFacebook size="1.5rem" />
             Sign up with Facebook
-          </Button>
+          </Button> */}
+          <FacebookLoginComponent />
         </Box>
         <Box>
           <Button

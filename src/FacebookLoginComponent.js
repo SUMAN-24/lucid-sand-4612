@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react";
+import { Button, useToast } from "@chakra-ui/react";
 import React, { useState } from "react";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 import { BsFacebook } from "react-icons/bs";
@@ -8,9 +8,11 @@ import "./App.css";
 
 function FacebookLoginComponent() {
   const [login, setLogin] = useState(false);
-  const [data, setData] = useState({});
-  const [picture, setPicture] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  // const [data, setData] = useState({});
+  // const [picture, setPicture] = useState("");
+  // const [isLoading, setIsLoading] = useState(false);
+  const [disabled, setDisabled] = useState(false);
+  const toast = useToast();
   const navigate = useNavigate();
 
   const responseFacebook = (response) => {
@@ -18,22 +20,45 @@ function FacebookLoginComponent() {
     // Login failed
     if (response.status === "unknown") {
       setLogin(false);
-      return false;
-    }
-    setData(response);
-    setPicture(response.picture.data.url);
-    if (response.accessToken) {
-      //   setIsLoading(true);
-      setLogin(true);
-    } else {
+      toast({
+        title: "Invalid Credentials.",
+        status: "error",
+        duration: 2000,
+        isClosable: true,
+      });
+    } else if (response.accessToken && response.error) {
       setLogin(false);
+      toast({
+        title: "Error logging in.",
+        description: "Try logging in from https",
+        status: "error",
+        duration: 2000,
+        isClosable: true,
+      });
+    } else if (response.accessToken && !response.error) {
+      //setIsLoading(true);
+      // console.log(response);
+      // console.log(response.accessToken);
+      // setData(response);
+      // setPicture(response.picture.data.url);
+      setLogin(true);
+      setDisabled(true);
+      toast({
+        title: "Logged in Successfully.",
+        description: "Welcome!",
+        status: "success",
+        duration: 2000,
+        isClosable: true,
+      });
+      navigate("/plans");
     }
   };
-  const logout = () => {
-    setLogin(false);
-    setData({});
-    setPicture("");
-  };
+
+  // const logout = () => {
+  //   setLogin(false);
+  //   setData({});
+  //   setPicture("");
+  // };
 
   return (
     <div class="container">
@@ -54,6 +79,7 @@ function FacebookLoginComponent() {
               colorScheme="facebook"
               width="22.5rem"
               gap="1rem"
+              disabled={disabled}
             >
               <BsFacebook size="1.5rem" />
               Log in with Facebook
@@ -62,7 +88,8 @@ function FacebookLoginComponent() {
         />
       )}
 
-      {login && navigate("/app")}
+      {/* {login && navigate("/plans")} */}
+
       {/* {login && (
         <div className="card">
           <div className="card-body">

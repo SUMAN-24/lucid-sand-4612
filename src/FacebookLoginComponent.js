@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 import "./App.css";
 
-function FacebookLoginComponent() {
+function FacebookLoginComponent({ buttonInfo }) {
   const [login, setLogin] = useState(false);
   // const [data, setData] = useState({});
   // const [picture, setPicture] = useState("");
@@ -82,7 +82,7 @@ function FacebookLoginComponent() {
               disabled={disabled}
             >
               <BsFacebook size="1.5rem" />
-              Log in with Facebook
+              {buttonInfo}
             </Button>
           )}
         />

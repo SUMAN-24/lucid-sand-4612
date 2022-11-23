@@ -17,7 +17,7 @@ import {
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./Navbar/Logo";
-import { BsFacebook, BsGoogle } from "react-icons/bs";
+import { BsGoogle } from "react-icons/bs";
 import FacebookLoginComponent from "../FacebookLoginComponent";
 
 const SignUpPage = () => {
@@ -53,7 +53,7 @@ const SignUpPage = () => {
             <BsFacebook size="1.5rem" />
             Sign up with Facebook
           </Button> */}
-          <FacebookLoginComponent />
+          <FacebookLoginComponent buttonInfo={"Sign up with Facebook"} />
         </Box>
         <Box>
           <Button

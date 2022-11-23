@@ -128,7 +128,7 @@ const LoginPage = () => {
             <BsFacebook size="1.5rem" />
             Log in with Facebook
           </Button> */}
-          <FacebookLoginComponent />
+          <FacebookLoginComponent buttonInfo={"Log in with Facebook"} />
 
           {/* </a> */}
         </Box>

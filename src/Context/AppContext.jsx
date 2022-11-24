@@ -3,12 +3,13 @@ import { createContext, useState } from "react";
 export const AppContext = createContext();
 
 const token = JSON.parse(localStorage.getItem("token"));
+const userDetails = JSON.parse(localStorage.getItem("userDetails")) || "";
 
 const initialState = {
   isAuth: false,
-  name: "",
-  email: "",
-  image: "",
+  name: userDetails.name,
+  email: userDetails.email,
+  image: userDetails.image,
   token: token,
 };
 
@@ -17,7 +18,9 @@ function AppContextProvider({ children }) {
 
   const loginUser = (name, email, image, token) => {
     // console.log(token);
+
     localStorage.setItem("token", JSON.stringify(token));
+    localStorage.setItem("userDetails", JSON.stringify({ name, email, image }));
     setState({
       ...initialState,
       isAuth: true,
@@ -30,6 +33,7 @@ function AppContextProvider({ children }) {
 
   const logoutUser = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("userDetails");
     setState({
       ...initialState,
       isAuth: false,

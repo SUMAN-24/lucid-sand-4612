@@ -11,7 +11,6 @@ function FacebookLoginComponent({ buttonInfo }) {
   const [login, setLogin] = useState(false);
   const authDetails = useContext(AppContext);
   // const [isLoading, setIsLoading] = useState(false);
-  const [disabled, setDisabled] = useState(false);
   const toast = useToast();
   const navigate = useNavigate();
 
@@ -46,7 +45,7 @@ function FacebookLoginComponent({ buttonInfo }) {
         response.picture.data.url,
         response.accessToken
       );
-      setDisabled(true);
+
       toast({
         title: "Logged in Successfully.",
         description: "Welcome!",
@@ -79,7 +78,7 @@ function FacebookLoginComponent({ buttonInfo }) {
             //   This is my custom FB button
             // </button>
             <Button
-              disabled={disabled}
+              disabled={localStorage.getItem("token")}
               onClick={renderProps.onClick}
               colorScheme="facebook"
               width="22.5rem"

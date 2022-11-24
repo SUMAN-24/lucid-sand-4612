@@ -75,6 +75,7 @@ const LoginPage = () => {
             formState.image,
             res.token
           );
+
           toast({
             title: "Logged in Successfully.",
             // description: "We've created your account for you.",
@@ -234,6 +235,7 @@ const LoginPage = () => {
               mt="0.6rem"
               fontWeight="bold"
               onClick={handleSubmit}
+              disabled={localStorage.getItem("token")}
             >
               Log in
             </Button>

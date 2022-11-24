@@ -5,14 +5,15 @@ import { AppContext } from "../Context/AppContext";
 function PrivateRoute({ children }) {
   const { state } = useContext(AppContext);
   const isAuth = state.isAuth;
+  const token = state.token;
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!isAuth) {
+    if (isAuth === false && token === null) {
       return navigate("/login");
     }
-  }, [isAuth, navigate]);
-
+  }, [isAuth, navigate, token]);
+  //console.log(isAuth, token);
   return children;
 }
 

@@ -69,12 +69,17 @@ const LoginPage = () => {
       .then((res) => {
         console.log(res);
         if (res.token) {
-          authDetails.loginUser(res.token);
+          authDetails.loginUser(
+            formState.name,
+            formState.email,
+            formState.image,
+            res.token
+          );
           toast({
             title: "Logged in Successfully.",
             // description: "We've created your account for you.",
             status: "success",
-            duration: 2000,
+            duration: 3000,
             isClosable: true,
           });
           navigate("/app");
@@ -83,7 +88,7 @@ const LoginPage = () => {
             title: "Enter correct Credentials.",
             description: res.error,
             status: "error",
-            duration: 2000,
+            duration: 3000,
             isClosable: true,
           });
         }
@@ -170,6 +175,7 @@ const LoginPage = () => {
             </FormLabel>
             <Input
               type="email"
+              id="1"
               // value={formState.email}
               name="email"
               onChange={handleChange}
@@ -198,6 +204,7 @@ const LoginPage = () => {
               <Input
                 pr="4.5rem"
                 // value={formState.password}
+                id="2"
                 name="password"
                 type={show ? "text" : "password"}
                 onChange={handleChange}

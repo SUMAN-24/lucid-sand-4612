@@ -1,15 +1,15 @@
 import { Button, useToast } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 import { BsFacebook } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
 import "./App.css";
+import { AppContext } from "./Context/AppContext";
 
 function FacebookLoginComponent({ buttonInfo }) {
   const [login, setLogin] = useState(false);
-  // const [data, setData] = useState({});
-  // const [picture, setPicture] = useState("");
+  const authDetails = useContext(AppContext);
   // const [isLoading, setIsLoading] = useState(false);
   const [disabled, setDisabled] = useState(false);
   const toast = useToast();
@@ -23,7 +23,7 @@ function FacebookLoginComponent({ buttonInfo }) {
       toast({
         title: "Invalid Credentials.",
         status: "error",
-        duration: 2000,
+        duration: 3000,
         isClosable: true,
       });
     } else if (response.accessToken && response.error) {
@@ -32,25 +32,29 @@ function FacebookLoginComponent({ buttonInfo }) {
         title: "Error logging in.",
         description: "Try logging in from https",
         status: "error",
-        duration: 2000,
+        duration: 3000,
         isClosable: true,
       });
     } else if (response.accessToken && !response.error) {
       //setIsLoading(true);
-      // console.log(response);
+      //console.log(response);
       // console.log(response.accessToken);
-      // setData(response);
-      // setPicture(response.picture.data.url);
       setLogin(true);
+      authDetails.loginUser(
+        response.name,
+        response.email,
+        response.picture.data.url,
+        response.accessToken
+      );
       setDisabled(true);
       toast({
         title: "Logged in Successfully.",
         description: "Welcome!",
         status: "success",
-        duration: 2000,
+        duration: 3000,
         isClosable: true,
       });
-      navigate("/plans");
+      navigate("/app");
     }
   };
 
@@ -61,7 +65,7 @@ function FacebookLoginComponent({ buttonInfo }) {
   // };
 
   return (
-    <div class="container">
+    <div className="container">
       {!login && (
         <FacebookLogin
           appId="561943938882995"
@@ -75,11 +79,11 @@ function FacebookLoginComponent({ buttonInfo }) {
             //   This is my custom FB button
             // </button>
             <Button
+              disabled={disabled}
               onClick={renderProps.onClick}
               colorScheme="facebook"
               width="22.5rem"
               gap="1rem"
-              disabled={disabled}
             >
               <BsFacebook size="1.5rem" />
               {buttonInfo}

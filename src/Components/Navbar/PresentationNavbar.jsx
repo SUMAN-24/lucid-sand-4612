@@ -4,23 +4,33 @@ import {
   Stack,
   Divider,
   Button,
-  Img,
-  Icon,
   Tooltip,
+  Wrap,
+  WrapItem,
+  Avatar,
+  Menu,
+  MenuList,
+  MenuGroup,
+  MenuItem,
+  MenuDivider,
+  MenuButton,
+  Icon,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import Signup from "./Signup";
 import Logo from "./Logo";
-import { Link, NavLink } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsStarFill, BsQuestionCircle } from "react-icons/bs";
-import Features from "./Features";
-import Solutions from "./Solutions";
-import Resources from "./Resources";
-import Pricing from "./Pricing";
-import Enterprise from "./Enterprise";
+import { useContext } from "react";
+import { AppContext } from "../../Context/AppContext";
 
 const PresentationNavbar = ({ display, style }) => {
   const [hover, setHover] = useState(false);
+  const { state, logoutUser } = useContext(AppContext);
+  const name = state.name;
+  const email = state.email;
+  const image = state.image;
+
+  const navigate = useNavigate();
 
   const onHover = () => {
     setHover(true);
@@ -28,6 +38,11 @@ const PresentationNavbar = ({ display, style }) => {
 
   const onLeave = () => {
     setHover(false);
+  };
+
+  const handleLogout = () => {
+    logoutUser();
+    navigate("/");
   };
 
   return (
@@ -67,12 +82,66 @@ const PresentationNavbar = ({ display, style }) => {
               </Box>
             </Tooltip>
             <Box>
-              <Signup width="5.5rem" fontSize="md" display={display} />
+              {/* <Signup width="5.5rem" fontSize="md" display={display} /> */}
+              {/* <Wrap>
+                <WrapItem>
+                  <Avatar bg="teal.600" name={name} src={image} />
+                </WrapItem>
+              </Wrap> */}
+
+              <Menu>
+                <MenuButton>
+                  <Wrap>
+                    <WrapItem>
+                      <Avatar bg="teal.600" name={name} src={image} />
+                    </WrapItem>
+                  </Wrap>
+                </MenuButton>
+
+                <MenuList>
+                  <MenuGroup title={name}>
+                    {/* <MenuItem>{name}</MenuItem>
+                    <MenuItem>{email}</MenuItem> */}
+                  </MenuGroup>
+                  <MenuGroup title={email}>
+                    {/* <MenuItem>{name}</MenuItem>
+                    <MenuItem>{email}</MenuItem> */}
+                  </MenuGroup>
+                  <MenuDivider />
+                  <MenuGroup>
+                    <MenuItem fontSize="medium" fontFamily="sans-serif">
+                      Settings
+                    </MenuItem>
+                    <MenuItem fontSize="medium" fontFamily="sans-serif">
+                      Billing
+                    </MenuItem>
+                    <MenuItem fontSize="medium" fontFamily="sans-serif">
+                      Find available teams
+                    </MenuItem>
+                    <MenuItem fontSize="medium" fontFamily="sans-serif">
+                      Team settings
+                    </MenuItem>
+                    <MenuItem fontSize="medium" fontFamily="sans-serif">
+                      Manage members
+                    </MenuItem>
+                  </MenuGroup>
+                  <MenuDivider />
+                  <MenuGroup>
+                    <MenuItem
+                      onClick={handleLogout}
+                      fontSize="medium"
+                      fontFamily="sans-serif"
+                    >
+                      Log out
+                    </MenuItem>
+                  </MenuGroup>
+                </MenuList>
+              </Menu>
             </Box>
           </Box>
         </Box>
       </HStack>
-      <Divider orientation="horizontal" pt="0.3rem" size="100%" />
+      <Divider orientation="horizontal" />
     </Stack>
   );
 };

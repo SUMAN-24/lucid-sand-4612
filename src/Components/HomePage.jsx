@@ -304,12 +304,14 @@ const HomePage = () => {
                 fontSize="3xl"
                 fontWeight="semibold"
                 color="rgb(16,24,52)"
-                noOfLines={[4, 5, 6]}
+                // noOfLines={[4, 5, 6]}
               >
-                <Text>"I can pose a question easily and</Text>
-                <Text> within a minute or two,have </Text>
-                <Text> aggregated responses from every</Text>
-                <Text> participant."</Text>
+                <Text>"Mentimeter allows everyone to</Text>
+                <Text>ask questions, to get</Text>
+                <Text>clarification or a clearer</Text>
+                <Text>understanding on subjects</Text>
+                <Text>resulting in a more fulfilling</Text>
+                <Text>learning experience."</Text>
               </Heading>
               <br />
               <Text
@@ -317,7 +319,7 @@ const HomePage = () => {
                 fontWeight="semibold"
                 color="rgb(25, 108, 255)"
               >
-                Andrew Hollo, Workwell Consulting
+                Teresa Delfin, California State Polytechnic University
               </Text>
               <br />
               <br />

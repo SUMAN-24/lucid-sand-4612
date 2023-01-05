@@ -294,7 +294,7 @@ const HomePage = () => {
               <Image
                 width="100%"
                 height="100%"
-                src="https://www.mentimeter.com/_next/static/media/andrew-hollo.3f3b1387.png"
+                src="https://images.ctfassets.net/rvt0uslu5yqp/3ur1LkUzjZbEROejNobhF9/eb27bd1f1535d0632389733007de6b7d/teresa-homepage.png?fm=webp&w=1920&q=75"
                 alt="andrew-hollo"
               />
             </Box>

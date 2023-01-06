@@ -67,7 +67,7 @@ function FacebookLoginComponent({ buttonInfo }) {
     <div className="container">
       {!login && (
         <FacebookLogin
-          appId="561943938882995"
+          appId={process.env.REACT_APP_FACEBOOKAPPID}
           autoLoad={false}
           fields="name,email,picture"
           scope="public_profile,email,user_friends"

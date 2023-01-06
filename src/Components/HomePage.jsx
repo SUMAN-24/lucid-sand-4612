@@ -13,6 +13,7 @@ import React from "react";
 import Footer from "./Footer/Footer";
 import Navbar from "./Navbar/Navbar";
 import Signup from "./Navbar/Signup";
+import image from "../images/teresa-homepage.png";
 
 const HomePage = () => {
   const text = "homepage";
@@ -220,6 +221,7 @@ const HomePage = () => {
                     fontFamily="body"
                     fontSize="6xl"
                     color="rgb(16,24,52)"
+                    ml="12"
                   >
                     280 M
                   </Heading>
@@ -232,7 +234,7 @@ const HomePage = () => {
                   />
                 </Box>
                 <Box pt="1rem">
-                  <Text fontSize="xl" fontWeight="semibold">
+                  <Text fontSize="1.5rem" fontWeight="semibold" ml="-10">
                     Voters
                   </Text>
                 </Box>
@@ -245,6 +247,7 @@ const HomePage = () => {
                     fontFamily="body"
                     fontSize="6xl"
                     color="rgb(16,24,52)"
+                    ml="20"
                   >
                     14 M
                   </Heading>
@@ -257,7 +260,7 @@ const HomePage = () => {
                   />
                 </Box>
                 <Box pt="1rem">
-                  <Text fontSize="xl" fontWeight="semibold">
+                  <Text fontSize="1.5rem" fontWeight="semibold">
                     Presenters
                   </Text>
                 </Box>
@@ -269,6 +272,7 @@ const HomePage = () => {
                     fontWeight="semibold"
                     fontFamily="body"
                     fontSize="6xl"
+                    ml="20"
                   >
                     220+
                   </Heading>
@@ -281,7 +285,7 @@ const HomePage = () => {
                   />
                 </Box>
                 <Box pt="1rem">
-                  <Text fontSize="xl" fontWeight="semibold">
+                  <Text fontSize="1.5rem" fontWeight="semibold">
                     Countries & territories
                   </Text>
                 </Box>
@@ -294,8 +298,8 @@ const HomePage = () => {
               <Image
                 width="100%"
                 height="100%"
-                src="https://images.ctfassets.net/rvt0uslu5yqp/3ur1LkUzjZbEROejNobhF9/eb27bd1f1535d0632389733007de6b7d/teresa-homepage.png?fm=webp&w=1920&q=75"
-                alt="andrew-hollo"
+                src={image}
+                alt="teresa-delfin"
               />
             </Box>
             <Box pr="6rem" pt="-2rem">

@@ -13,7 +13,7 @@ import React from "react";
 import Footer from "./Footer/Footer";
 import Navbar from "./Navbar/Navbar";
 import Signup from "./Navbar/Signup";
-import image from "../images/teresa-homepage.png";
+import image from "../Media/images/teresa-homepage.png";
 
 const HomePage = () => {
   const text = "homepage";

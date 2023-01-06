@@ -343,6 +343,7 @@ const HomePage = () => {
             </Box>
           </Box>
 
+          {/* footer */}
           <Footer />
         </VStack>
       </Stack>

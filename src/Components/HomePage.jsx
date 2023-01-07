@@ -246,14 +246,14 @@ const HomePage = () => {
           <Box pt="1.8rem">
             <HStack gap="3rem">
               <Link to="#">
-                <VStack  _hover={{ transition: "all ease 1s",transform: "translateY"}}>
+                <VStack
+                  _hover={{
+                    transition: "all ease-in-out 650ms",
+                    transform: "translateY(-0.68rem)",
+                  }}
+                >
                   <Box align="center">
-                    <Image
-                      height="60%"
-                      width="60%"
-                      src={image3}
-                      alt="menti"
-                    />
+                    <Image height="60%" width="60%" src={image3} alt="menti" />
                   </Box>
 
                   <Box pt="1rem">
@@ -284,14 +284,14 @@ const HomePage = () => {
               </Link>
 
               <Link to="#">
-                <VStack>
-                  <Box mt="1rem" align="center">
-                    <Image
-                      height="60%"
-                      width="60%"
-                      src={image4}
-                      alt="menti"
-                    />
+                <VStack
+                  _hover={{
+                    transition: "all ease-in-out 650ms",
+                    transform: "translateY(-0.68rem)",
+                  }}
+                >
+                  <Box pt="1rem" align="center">
+                    <Image height="60%" width="60%" src={image4} alt="menti" />
                   </Box>
                   <Box pt="1rem">
                     <Heading
@@ -321,14 +321,14 @@ const HomePage = () => {
               </Link>
 
               <Link to="#">
-                <VStack>
+                <VStack
+                  _hover={{
+                    transition: "all ease-in-out 650ms",
+                    transform: "translateY(-0.68rem)",
+                  }}
+                >
                   <Box align="center">
-                    <Image
-                      height="60%"
-                      width="60%"
-                      src={image5}
-                      alt="menti"
-                    />
+                    <Image height="60%" width="60%" src={image5} alt="menti" />
                   </Box>
                   <Box pt="1rem">
                     <Heading
@@ -357,14 +357,14 @@ const HomePage = () => {
               </Link>
 
               <Link to="#">
-                <VStack>
+                <VStack
+                  _hover={{
+                    transition: "all ease-in-out 650ms",
+                    transform: "translateY(-0.68rem)",
+                  }}
+                >
                   <Box mt="-1.5rem" align="center">
-                    <Image
-                      height="60%"
-                      width="60%"
-                      src={image6}
-                      alt="menti"
-                    />
+                    <Image height="60%" width="60%" src={image6} alt="menti" />
                   </Box>
                   <Box pt="1rem">
                     <Heading

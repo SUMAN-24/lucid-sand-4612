@@ -13,7 +13,13 @@ import React from "react";
 import Footer from "./Footer/Footer";
 import Navbar from "./Navbar/Navbar";
 import Signup from "./Navbar/Signup";
-import image from "../Media/images/teresa-homepage.png";
+import image1 from "../Media/images/teresa-homepage.png";
+import image2 from "../Media/images/menti-pattern.png";
+import image3 from "../Media/images/Dynamic_Word.png";
+import image4 from "../Media/images/Live.png";
+import image5 from "../Media/images/Entertaining.png";
+import image6 from "../Media/images/Informative.png";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const text = "homepage";
@@ -72,128 +78,6 @@ const HomePage = () => {
             >
               No credit card needed
             </Text>
-          </Box>
-        </VStack>
-      </Stack>
-
-      <Stack mt="2rem" height="42rem">
-        <VStack backgroundColor="rgb(236,237,239)" height="42rem">
-          <Box mt="3rem">
-            <Heading as="h2" color="blue" fontWeight="semibold" fontSize="3rem">
-              What is Mentimeter?
-            </Heading>
-          </Box>
-
-          <Box pt="4rem">
-            <HStack gap="3rem">
-              <VStack>
-                <Box>
-                  <Image
-                    height="100%"
-                    width="100%"
-                    src="https://www.mentimeter.com/_next/static/media/prepare.589e36de.svg"
-                    alt="menti"
-                  />
-                </Box>
-                <Box pt="1rem">
-                  <Heading as="h3" fontSize="2xl" fontWeight="semibold">
-                    Prepare
-                  </Heading>
-                </Box>
-                <Box display="block">
-                  <Text
-                    fontSize="16px"
-                    textAlign="center"
-                    fontWeight="semibold"
-                    color="rgb(86,92,111)"
-                    noOfLines={[5, 6, 7, 8]}
-                  >
-                    <Text>Build interactive presentations with the</Text>
-                    <Text> easy-to-use online editor. Add questions,</Text>
-                    <Text> polls, quizzes, slides, images, gifs and more</Text>
-                    <Text> to your presentation to create fun and</Text>
-                    <Text> engaging presentations.</Text>
-                  </Text>
-                </Box>
-              </VStack>
-
-              <VStack>
-                <Box>
-                  <Image
-                    height="100%"
-                    width="100%"
-                    src="https://www.mentimeter.com/_next/static/media/engage.ba9959f7.svg"
-                    alt="menti"
-                  />
-                </Box>
-                <Box pt="1rem">
-                  <Heading as="h3" fontSize="2xl" fontWeight="semibold">
-                    Engaze
-                  </Heading>
-                </Box>
-                <Box display="block">
-                  <Text
-                    fontSize="16px"
-                    textAlign="center"
-                    fontWeight="semibold"
-                    color="rgb(86,92,111)"
-                    noOfLines={[5, 6, 7, 8]}
-                  >
-                    <Text>Your audience uses their smartphones to</Text>
-                    <Text> connect to the presentation where they</Text>
-                    <Text> can answer questions. Visualize their</Text>
-                    <Text> responses in real-time to create a fun and</Text>
-                    <Text> interactive experience.</Text>
-                  </Text>
-                </Box>
-              </VStack>
-
-              <VStack>
-                <Box mt="-1.5rem">
-                  <Image
-                    height="100%"
-                    width="100%"
-                    src="https://www.mentimeter.com/_next/static/media/followup.14994f30.svg"
-                    alt="menti"
-                  />
-                </Box>
-                <Box pt="1rem">
-                  <Heading as="h3" fontSize="2xl" fontWeight="semibold">
-                    Follow-up
-                  </Heading>
-                </Box>
-                <Box display="block">
-                  <Text
-                    fontSize="16px"
-                    textAlign="center"
-                    fontWeight="semibold"
-                    color="rgb(86,92,111)"
-                    noOfLines={[5, 6, 7, 8]}
-                  >
-                    <Text>Once your Mentimeter presentation is over,</Text>
-                    <Text> share and export your results for further</Text>
-                    <Text> analysis and even compare data over time</Text>
-                    <Text> to measure the progress of your audience.'</Text>
-                  </Text>
-                </Box>
-              </VStack>
-            </HStack>
-          </Box>
-
-          <Box pt="2rem">
-            <Button
-              size="md"
-              height="45px"
-              width="170px"
-              border="2px"
-              backgroundColor="rgb(236,237,239)"
-              borderColor="rgb(25, 108, 255)"
-              color="rgb(25, 108, 255)"
-              _hover={{ bgColor: "rgb(25, 108, 255)", color: "white" }}
-              fontFamily="sans-serif"
-            >
-              Explore Features
-            </Button>
           </Box>
         </VStack>
       </Stack>
@@ -298,7 +182,7 @@ const HomePage = () => {
               <Image
                 width="100%"
                 height="100%"
-                src={image}
+                src={image1}
                 alt="teresa-delfin"
               />
             </Box>
@@ -337,15 +221,230 @@ const HomePage = () => {
                 color="rgb(25, 108, 255)"
                 _hover={{ bgColor: "rgb(25, 108, 255)", color: "white" }}
                 fontFamily="sans-serif"
+                ml="8rem"
               >
                 Explore More Stories
               </Button>
             </Box>
           </Box>
-
-          {/* footer */}
-          <Footer />
         </VStack>
+      </Stack>
+
+      <Stack mt="2rem" height="34rem">
+        <VStack backgroundColor="rgb(236,237,239)" height="34rem">
+          <Box mt="3rem">
+            <Heading
+              as="h2"
+              color="rgb(16,24,52)"
+              fontWeight="semibold"
+              fontSize="3rem"
+            >
+              A feature for every need
+            </Heading>
+          </Box>
+
+          <Box pt="1.8rem">
+            <HStack gap="3rem">
+              <Link to="#">
+                <VStack  _hover={{ transition: "all ease 1s",transform: "translateY"}}>
+                  <Box align="center">
+                    <Image
+                      height="60%"
+                      width="60%"
+                      src={image3}
+                      alt="menti"
+                    />
+                  </Box>
+
+                  <Box pt="1rem">
+                    <Heading
+                      as="h3"
+                      fontSize="2xl"
+                      fontWeight="semibold"
+                      textAlign="center"
+                    >
+                      <Text>Dynamic Word</Text>
+                      <Text> Clouds</Text>
+                    </Heading>
+                  </Box>
+
+                  <Box
+                    display="block"
+                    fontSize="16px"
+                    textAlign="center"
+                    fontWeight="semibold"
+                    color="rgb(86,92,111)"
+                    // noOfLines={[5, 6, 7, 8]}
+                  >
+                    <Text>A vibrant way to visualize</Text>
+                    <Text>your audience's ideas</Text>
+                    <Text color="rgb(25,108,255)">Learn more</Text>
+                  </Box>
+                </VStack>
+              </Link>
+
+              <Link to="#">
+                <VStack>
+                  <Box mt="1rem" align="center">
+                    <Image
+                      height="60%"
+                      width="60%"
+                      src={image4}
+                      alt="menti"
+                    />
+                  </Box>
+                  <Box pt="1rem">
+                    <Heading
+                      as="h3"
+                      fontSize="2xl"
+                      fontWeight="semibold"
+                      textAlign="center"
+                    >
+                      <Text>Live & Instant</Text>
+                      <Text>Polling</Text>
+                    </Heading>
+                  </Box>
+                  <Box
+                    display="block"
+                    fontSize="16px"
+                    textAlign="center"
+                    fontWeight="semibold"
+                    color="rgb(86,92,111)"
+                    // noOfLines={[5, 6, 7, 8]}
+                  >
+                    <Text>Let your audience answer</Text>
+                    <Text>any question you may have</Text>
+                    <Text>for them</Text>
+                    <Text color="rgb(25,108,255)">Learn more</Text>
+                  </Box>
+                </VStack>
+              </Link>
+
+              <Link to="#">
+                <VStack>
+                  <Box align="center">
+                    <Image
+                      height="60%"
+                      width="60%"
+                      src={image5}
+                      alt="menti"
+                    />
+                  </Box>
+                  <Box pt="1rem">
+                    <Heading
+                      as="h3"
+                      fontSize="2xl"
+                      fontWeight="semibold"
+                      textAlign="center"
+                    >
+                      <Text>Entertaining</Text>
+                      <Text>Quizzes</Text>
+                    </Heading>
+                  </Box>
+                  <Box
+                    display="block"
+                    fontSize="16px"
+                    textAlign="center"
+                    fontWeight="semibold"
+                    color="rgb(86,92,111)"
+                    // noOfLines={[5, 6, 7, 8]}
+                  >
+                    <Text>Run factual, fun, or</Text>
+                    <Text>icebreaker quizzes</Text>
+                    <Text color="rgb(25,108,255)">Learn more</Text>
+                  </Box>
+                </VStack>
+              </Link>
+
+              <Link to="#">
+                <VStack>
+                  <Box mt="-1.5rem" align="center">
+                    <Image
+                      height="60%"
+                      width="60%"
+                      src={image6}
+                      alt="menti"
+                    />
+                  </Box>
+                  <Box pt="1rem">
+                    <Heading
+                      as="h3"
+                      fontSize="2xl"
+                      fontWeight="semibold"
+                      textAlign="center"
+                    >
+                      Informative Q&As
+                    </Heading>
+                  </Box>
+                  <Box
+                    display="block"
+                    fontSize="16px"
+                    textAlign="center"
+                    fontWeight="semibold"
+                    color="rgb(86,92,111)"
+                    // noOfLines={[5, 6, 7, 8]}
+                  >
+                    <Text>Let your audience ask</Text>
+                    <Text>questions without the fuss</Text>
+                    <Text color="rgb(25,108,255)">Learn more</Text>
+                  </Box>
+                </VStack>
+              </Link>
+            </HStack>
+          </Box>
+
+          {/* <Box pt="2rem">
+            <Button
+              size="md"
+              height="45px"
+              width="170px"
+              border="2px"
+              backgroundColor="rgb(236,237,239)"
+              borderColor="rgb(25, 108, 255)"
+              color="rgb(25, 108, 255)"
+              _hover={{ bgColor: "rgb(25, 108, 255)", color: "white" }}
+              fontFamily="sans-serif"
+            >
+              Explore Features
+            </Button>
+          </Box> */}
+        </VStack>
+      </Stack>
+
+      <Stack pt="5rem">
+        <Box position="relative" m="auto" w="100%">
+          <Image src={image2} />
+        </Box>
+        <Box
+          position="absolute"
+          textAlign="center"
+          w="100%"
+          color="white"
+          fontSize="2.8rem"
+          fontFamily="sans-serif"
+          pt="1.5rem"
+        >
+          <Text>Impress with Interactive</Text>
+          <Text>Presentations</Text>
+          <Button
+            backgroundColor="white"
+            borderColor="rgb(25, 108, 255)"
+            color="rgb(25, 108, 255)"
+            _hover={{ bgColor: "rgb(193,193,193)" }}
+            w="140px"
+            h="48px"
+            fontSize="1.2rem"
+          >
+            Get started
+          </Button>
+        </Box>
+      </Stack>
+
+      {/* footer */}
+      <Stack mt="-3rem">
+        <Box>
+          <Footer />
+        </Box>
       </Stack>
     </div>
   );

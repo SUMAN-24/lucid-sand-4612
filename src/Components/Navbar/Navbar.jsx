@@ -62,7 +62,7 @@ const Navbar = ({ display, style }) => {
               <Login />
             </Box>
             <Box>
-              <Signup width="5.5rem" fontSize="md" display={display} />
+              <Signup width="5.5rem" fontSize="md" display={display} placeholder="Sign up" />
             </Box>
           </Box>
         </Box>

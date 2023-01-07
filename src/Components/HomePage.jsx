@@ -19,6 +19,8 @@ import image3 from "../Media/images/Dynamic_Word.png";
 import image4 from "../Media/images/Live.png";
 import image5 from "../Media/images/Entertaining.png";
 import image6 from "../Media/images/Informative.png";
+import image7 from "../Media/images/hello.png";
+import { BsFillPlayFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
@@ -63,17 +65,19 @@ const HomePage = () => {
 
           <Box pt="2rem">
             <Signup
-              width="8rem"
+              width="13rem"
               height="3.5rem"
-              fontSize="2xl"
+              fontSize="xl"
               display="homepage"
+              fontFamily="sans-serif"
+              placeholder="Sign up for Free"
             />
           </Box>
 
           <Box>
             <Text
               color="rgba(16, 24, 52, 0.75)"
-              fontSize="xs"
+              fontSize="large"
               fontWeight="semibold"
             >
               No credit card needed
@@ -82,7 +86,32 @@ const HomePage = () => {
         </VStack>
       </Stack>
 
-      <Stack>
+      <Stack mt="3rem">
+        <Box align="center" position="relative" w="100%">
+          <Image w="60%" src={image7} alt="hello" />
+        </Box>
+
+        <Box
+          position="absolute"
+          align="center"
+          w="100%"
+          pt="12rem"
+          zIndex="410"
+        >
+          <Button
+            width="10rem"
+            height="3rem"
+            fontSize="1rem"
+            fontFamily="sans-serif"
+            colorScheme="messenger"
+            rightIcon={<BsFillPlayFill color="white" size="1.5rem" />}
+          >
+            Watch video
+          </Button>
+        </Box>
+      </Stack>
+
+      <Stack mt="2rem">
         <VStack>
           <Box mt="3.6rem">
             <Heading

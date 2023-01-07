@@ -2,7 +2,14 @@ import { Button, Heading } from "@chakra-ui/react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Signup = ({ width, height, fontSize, display }) => {
+const Signup = ({
+  width,
+  height,
+  fontSize,
+  fontFamily,
+  display,
+  placeholder,
+}) => {
   const navigate = useNavigate();
 
   return (
@@ -17,7 +24,9 @@ const Signup = ({ width, height, fontSize, display }) => {
           navigate(`/signup?referral=${display}`);
         }}
       >
-        <Heading fontSize={fontSize}>Sign up</Heading>
+        <Heading fontSize={fontSize} fontFamily={fontFamily}>
+          {placeholder}
+        </Heading>
       </Button>
     </div>
   );

@@ -23,6 +23,10 @@ import image7 from "../Media/images/hello.png";
 import image8 from "../Media/images/templates.svg";
 import image9 from "../Media/images/webinars.svg";
 import image10 from "../Media/images/mentimeter_academy.svg";
+import image11 from "../Media/images/zoom.svg";
+import image12 from "../Media/images/microsoft_teams.svg";
+import image13 from "../Media/images/hopin.svg";
+import image14 from "../Media/images/powerpoint.svg";
 import { BsFillPlayFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
@@ -425,22 +429,6 @@ const HomePage = () => {
               </Link>
             </HStack>
           </Box>
-
-          {/* <Box pt="2rem">
-            <Button
-              size="md"
-              height="45px"
-              width="170px"
-              border="2px"
-              backgroundColor="rgb(236,237,239)"
-              borderColor="rgb(25, 108, 255)"
-              color="rgb(25, 108, 255)"
-              _hover={{ bgColor: "rgb(25, 108, 255)", color: "white" }}
-              fontFamily="sans-serif"
-            >
-              Explore Features
-            </Button>
-          </Box> */}
         </VStack>
       </Stack>
 
@@ -577,27 +565,12 @@ const HomePage = () => {
               </Link>
             </HStack>
           </Box>
-
-          {/* <Box pt="2rem">
-            <Button
-              size="md"
-              height="45px"
-              width="170px"
-              border="2px"
-              backgroundColor="rgb(236,237,239)"
-              borderColor="rgb(25, 108, 255)"
-              color="rgb(25, 108, 255)"
-              _hover={{ bgColor: "rgb(25, 108, 255)", color: "white" }}
-              fontFamily="sans-serif"
-            >
-              Explore Features
-            </Button>
-          </Box> */}
         </VStack>
       </Stack>
 
-      <Stack mt="2rem" height="34rem">
-        <VStack backgroundColor="rgb(236,237,239)" height="34rem">
+      {/* Works with your favorite apps */}
+      <Stack mt="2rem" height="30rem">
+        <VStack backgroundColor="rgb(236,237,239)" height="30rem">
           <Box mt="3rem">
             <Heading
               as="h2"
@@ -605,12 +578,12 @@ const HomePage = () => {
               fontWeight="semibold"
               fontSize="3rem"
             >
-              A feature for every need
+              Works with your favorite apps
             </Heading>
           </Box>
 
           <Box pt="1.8rem">
-            <HStack gap="3rem">
+            <HStack gap="-2rem">
               <Link to="#">
                 <VStack
                   _hover={{
@@ -619,7 +592,7 @@ const HomePage = () => {
                   }}
                 >
                   <Box align="center">
-                    <Image height="60%" width="60%" src={image3} alt="menti" />
+                    <Image height="28%" width="28%" src={image11} alt="menti" />
                   </Box>
 
                   <Box pt="1rem">
@@ -629,8 +602,7 @@ const HomePage = () => {
                       fontWeight="semibold"
                       textAlign="center"
                     >
-                      <Text>Dynamic Word</Text>
-                      <Text> Clouds</Text>
+                      <Text>Zoom</Text>
                     </Heading>
                   </Box>
 
@@ -639,11 +611,7 @@ const HomePage = () => {
                     fontSize="16px"
                     textAlign="center"
                     fontWeight="semibold"
-                    color="rgb(86,92,111)"
-                    // noOfLines={[5, 6, 7, 8]}
                   >
-                    <Text>A vibrant way to visualize</Text>
-                    <Text>your audience's ideas</Text>
                     <Text color="rgb(25,108,255)">Learn more</Text>
                   </Box>
                 </VStack>
@@ -657,7 +625,7 @@ const HomePage = () => {
                   }}
                 >
                   <Box pt="1rem" align="center">
-                    <Image height="60%" width="60%" src={image4} alt="menti" />
+                    <Image height="28%" width="28%" src={image12} alt="menti" />
                   </Box>
                   <Box pt="1rem">
                     <Heading
@@ -666,8 +634,7 @@ const HomePage = () => {
                       fontWeight="semibold"
                       textAlign="center"
                     >
-                      <Text>Live & Instant</Text>
-                      <Text>Polling</Text>
+                      <Text>Microsoft Teams</Text>
                     </Heading>
                   </Box>
                   <Box
@@ -675,12 +642,7 @@ const HomePage = () => {
                     fontSize="16px"
                     textAlign="center"
                     fontWeight="semibold"
-                    color="rgb(86,92,111)"
-                    // noOfLines={[5, 6, 7, 8]}
                   >
-                    <Text>Let your audience answer</Text>
-                    <Text>any question you may have</Text>
-                    <Text>for them</Text>
                     <Text color="rgb(25,108,255)">Learn more</Text>
                   </Box>
                 </VStack>
@@ -694,7 +656,7 @@ const HomePage = () => {
                   }}
                 >
                   <Box align="center">
-                    <Image height="60%" width="60%" src={image5} alt="menti" />
+                    <Image height="28%" width="28%" src={image13} alt="menti" />
                   </Box>
                   <Box pt="1rem">
                     <Heading
@@ -703,8 +665,7 @@ const HomePage = () => {
                       fontWeight="semibold"
                       textAlign="center"
                     >
-                      <Text>Entertaining</Text>
-                      <Text>Quizzes</Text>
+                      <Text>Hopin</Text>
                     </Heading>
                   </Box>
                   <Box
@@ -712,11 +673,7 @@ const HomePage = () => {
                     fontSize="16px"
                     textAlign="center"
                     fontWeight="semibold"
-                    color="rgb(86,92,111)"
-                    // noOfLines={[5, 6, 7, 8]}
                   >
-                    <Text>Run factual, fun, or</Text>
-                    <Text>icebreaker quizzes</Text>
                     <Text color="rgb(25,108,255)">Learn more</Text>
                   </Box>
                 </VStack>
@@ -730,7 +687,7 @@ const HomePage = () => {
                   }}
                 >
                   <Box mt="-1.5rem" align="center">
-                    <Image height="60%" width="60%" src={image6} alt="menti" />
+                    <Image height="28%" width="28%" src={image14} alt="menti" />
                   </Box>
                   <Box pt="1rem">
                     <Heading
@@ -739,7 +696,7 @@ const HomePage = () => {
                       fontWeight="semibold"
                       textAlign="center"
                     >
-                      Informative Q&As
+                      PowerPoint
                     </Heading>
                   </Box>
                   <Box
@@ -747,11 +704,7 @@ const HomePage = () => {
                     fontSize="16px"
                     textAlign="center"
                     fontWeight="semibold"
-                    color="rgb(86,92,111)"
-                    // noOfLines={[5, 6, 7, 8]}
                   >
-                    <Text>Let your audience ask</Text>
-                    <Text>questions without the fuss</Text>
                     <Text color="rgb(25,108,255)">Learn more</Text>
                   </Box>
                 </VStack>
@@ -759,11 +712,11 @@ const HomePage = () => {
             </HStack>
           </Box>
 
-          {/* <Box pt="2rem">
+          <Box pt="3rem">
             <Button
               size="md"
               height="45px"
-              width="170px"
+              width="250px"
               border="2px"
               backgroundColor="rgb(236,237,239)"
               borderColor="rgb(25, 108, 255)"
@@ -771,9 +724,9 @@ const HomePage = () => {
               _hover={{ bgColor: "rgb(25, 108, 255)", color: "white" }}
               fontFamily="sans-serif"
             >
-              Explore Features
+              Explore all of our integrations
             </Button>
-          </Box> */}
+          </Box>
         </VStack>
       </Stack>
 

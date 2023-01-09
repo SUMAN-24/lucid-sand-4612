@@ -440,7 +440,7 @@ const HomePage = () => {
         </VStack>
       </Stack>
 
-      <Stack pt="5rem">
+      <Stack >
         <Box position="relative" m="auto" w="100%">
           <Image src={image2} />
         </Box>

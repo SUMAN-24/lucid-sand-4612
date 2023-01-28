@@ -16,7 +16,7 @@ const Navbar = ({ display, style }) => {
       <HStack>
         {/* Logo */}
         <Link to="/">
-          <Logo mt="1.1rem" ml="5rem" />
+          <Logo mt="1.1rem" ml="3.5rem" />
         </Link>
 
         {/* Sections */}

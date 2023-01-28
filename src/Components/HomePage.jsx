@@ -5,8 +5,14 @@ import {
   Heading,
   HStack,
   Image,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalOverlay,
   Stack,
   Text,
+  useDisclosure,
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
@@ -32,7 +38,7 @@ import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const text = "homepage";
-
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <div>
       {/* navbar */}
@@ -47,75 +53,108 @@ const HomePage = () => {
       />
 
       {/* start of homepage */}
-      <Stack mt="4rem">
-        <VStack>
-          {/* Engaze your Audience */}
-          <Heading
-            as="h2"
-            size="3xl"
-            noOfLines={[2, 3, 4, 5, 6]}
-            fontFamily="sans-serif"
-            fontWeight="semibold"
-            color="rgb(16,24,52)"
-            textAlign="center"
-          >
-            <Text>Engage your audience &</Text>
-            <Text> eliminate awkward silences</Text>
-          </Heading>
+      <Stack bgColor="rgb(209,226,255)" height="38rem">
+        <HStack mt="4rem">
+          <VStack ml="130px">
+            {/* Engaze your Audience */}
+            <Box>
+              <Heading
+                size="3xl"
+                fontFamily="sans-serif"
+                fontWeight="semibold"
+                letterSpacing="wide"
+                color="rgb(16,24,52)"
+              >
+                <Text>Engage your</Text>
+                <Text>audience &</Text>
+                <Text>eliminate awkward</Text>
+                <Text>silences</Text>
+              </Heading>
+            </Box>
 
-          <Box color="rgba(16, 24, 52, 0.75)" fontSize="22px">
-            <Text>
-              Our easy-to-build presentations, interactive Polls, Quizzes, and
-            </Text>
-            <Text>Word Clouds mean more participation and less stress</Text>
-          </Box>
+            <Box color="rgba(16, 24, 52, 0.75)" fontSize="22px">
+              <Text>
+                Our easy-to-build presentations, interactive Polls, Quizzes,
+              </Text>
+              <Text>and Word Clouds mean more participation and less</Text>
+              <Text>stress</Text>
+            </Box>
 
-          <Box pt="2rem">
-            <Signup
-              width="13rem"
-              height="3.5rem"
-              fontSize="xl"
-              display="homepage"
-              fontFamily="sans-serif"
-              placeholder="Sign up for Free"
-            />
-          </Box>
+            <Box pt="2rem">
+              <Signup
+                width="13rem"
+                height="3.5rem"
+                fontSize="xl"
+                display="homepage"
+                fontFamily="sans-serif"
+                placeholder="Sign up for Free"
+                marginLeft="-270px"
+              />
+            </Box>
 
-          <Box>
-            <Text
-              color="rgba(16, 24, 52, 0.75)"
-              fontSize="large"
-              fontWeight="semibold"
+            <Box>
+              <Text
+                color="rgba(16, 24, 52, 0.75)"
+                fontSize="large"
+                fontWeight="semibold"
+                ml="-270px"
+              >
+                No credit card needed
+              </Text>
+            </Box>
+          </VStack>
+
+          <Stack mt="3rem" pl="2rem">
+            <Box align="center" position="relative" w="100%">
+              <Image w="100%" src={image7} alt="hello" />
+            </Box>
+
+            <Box
+              position="absolute"
+              align="center"
+              pt="6rem"
+              pl="11rem"
+              zIndex="410"
             >
-              No credit card needed
-            </Text>
-          </Box>
-        </VStack>
-      </Stack>
+              <Button
+                width="6rem"
+                height="2.5rem"
+                fontSize="1rem"
+                fontFamily="sans-serif"
+                colorScheme="blackAlpha"
+                borderRadius="100px"
+                bgColor="#000000"
+                border="1px solid #ffffff"
+                _hover={{ textDecoration: "none" }}
+                leftIcon={<BsFillPlayFill color="white" size="1.5rem" />}
+                onClick={onOpen}
+              >
+                Play
+              </Button>
 
-      <Stack mt="3rem">
-        <Box align="center" position="relative" w="100%">
-          <Image w="60%" src={image7} alt="hello" />
-        </Box>
-
-        <Box
-          position="absolute"
-          align="center"
-          w="100%"
-          pt="12rem"
-          zIndex="410"
-        >
-          <Button
-            width="10rem"
-            height="3rem"
-            fontSize="1rem"
-            fontFamily="sans-serif"
-            colorScheme="messenger"
-            rightIcon={<BsFillPlayFill color="white" size="1.5rem" />}
-          >
-            Watch video
-          </Button>
-        </Box>
+              <Modal isOpen={isOpen} onClose={onClose} size="1200px">
+                <ModalOverlay bg="none" />
+                <ModalContent>
+                  <ModalCloseButton
+                    borderRadius="100%"
+                    bgColor="teal"
+                    color="white"
+                    _hover={{ textDecoration: "none" }}
+                  />
+                  <ModalBody>
+                    <iframe
+                      width="1200px"
+                      height="600px"
+                      src="https://player.vimeo.com/video/665231664"
+                      allowFullScreen
+                      title="About Mentimeter"
+                    ></iframe>
+                  </ModalBody>
+                </ModalContent>
+              </Modal>
+            </Box>
+          </Stack>
+        </HStack>
       </Stack>
 
       <Stack mt="2rem">
@@ -466,7 +505,12 @@ const HomePage = () => {
                   }}
                 >
                   <Box align="center">
-                    <Image height="100%" width="100%" src={image8} alt="menti" />
+                    <Image
+                      height="100%"
+                      width="100%"
+                      src={image8}
+                      alt="menti"
+                    />
                   </Box>
 
                   <Box pt="1rem">
@@ -503,7 +547,12 @@ const HomePage = () => {
                   }}
                 >
                   <Box align="center">
-                    <Image height="100%" width="100%" src={image9} alt="menti" />
+                    <Image
+                      height="100%"
+                      width="100%"
+                      src={image9}
+                      alt="menti"
+                    />
                   </Box>
                   <Box pt="1rem">
                     <Heading
@@ -538,7 +587,12 @@ const HomePage = () => {
                   }}
                 >
                   <Box align="center">
-                    <Image height="100%" width="100%" src={image10} alt="menti" />
+                    <Image
+                      height="100%"
+                      width="100%"
+                      src={image10}
+                      alt="menti"
+                    />
                   </Box>
                   <Box pt="1rem">
                     <Heading

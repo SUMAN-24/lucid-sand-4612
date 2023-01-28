@@ -9,6 +9,7 @@ const Signup = ({
   fontFamily,
   display,
   placeholder,
+  marginLeft
 }) => {
   const navigate = useNavigate();
 
@@ -20,6 +21,7 @@ const Signup = ({
         width={width}
         height={height}
         borderRadius={4}
+        marginLeft={marginLeft}
         onClick={() => {
           navigate(`/signup?referral=${display}`);
         }}

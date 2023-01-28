@@ -122,13 +122,14 @@ const HomePage = () => {
         <VStack>
           <Box mt="3.6rem">
             <Heading
-              fontFamily="sans-serif"
-              fontSize="5xl"
+              fontFamily="heading"
+              fontSize="48px"
+              lineHeight="1"
               fontWeight="semibold"
-              color="rgb(16,24,52)"
+              color="#101834"
             >
               <Text>Millions of voices have</Text>
-              <Text> already been heard</Text>
+              <Text ml="10">already been heard</Text>
             </Heading>
           </Box>
 
@@ -143,7 +144,7 @@ const HomePage = () => {
                     color="rgb(16,24,52)"
                     ml="12"
                   >
-                    280 M
+                    600 M
                   </Heading>
                   <Divider
                     width="18rem"
@@ -169,7 +170,7 @@ const HomePage = () => {
                     color="rgb(16,24,52)"
                     ml="20"
                   >
-                    14 M
+                    19 M
                   </Heading>
                   <Divider
                     width="18rem"

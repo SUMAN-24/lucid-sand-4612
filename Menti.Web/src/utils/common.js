@@ -1,3 +1,1 @@
-export const Api_Base_Url = () => {
-    return "https://mentiapi.cyclic.app";
-}
+export const Api_Base_Url = "https://mentiapi.cyclic.app";

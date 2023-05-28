@@ -45,7 +45,7 @@ const SignUpPage = () => {
   const handleRegister = (e) => {
     e.preventDefault();
     setLoading(true);
-    fetch("https://mentiapi.cyclic.app/signup",{
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/signup`,{
       method: "POST",
       body: JSON.stringify(userDetails),
       headers: {

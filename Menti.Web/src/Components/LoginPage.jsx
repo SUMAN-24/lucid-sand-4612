@@ -34,7 +34,7 @@ const LoginPage = () => {
   const handleClick = () => setShow(!show);
 
   const loginDetails = async (formState) => {
-    return await fetch("https://reqres.in/api/login", {
+    return await fetch("https://mentiapi.cyclic.app/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

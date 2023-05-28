@@ -45,7 +45,7 @@ const SignUpPage = () => {
   const handleRegister = (e) => {
     e.preventDefault();
     setLoading(true);
-    fetch(process.env.REACT_APP_APIBASEURL/signup,{
+    fetch(`${process.env.REACT_APP_APIBASEURL}/signup`,{
       method: "POST",
       body: JSON.stringify(userDetails),
       headers: {

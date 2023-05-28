@@ -21,6 +21,7 @@ import { BsGoogle } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 import { AppContext } from "../Context/AppContext";
 import FacebookLoginComponent from "../FacebookLoginComponent";
+import { Api_Base_Url } from "../utils/common";
 
 const LoginPage = () => {
   const [input, setInput] = useState("");
@@ -34,7 +35,7 @@ const LoginPage = () => {
   const handleClick = () => setShow(!show);
 
   const loginDetails = async (formState) => {
-    return await fetch(`${process.env.REACT_APP_APIBASEURL}/login`, {
+    return await fetch(`${Api_Base_Url}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

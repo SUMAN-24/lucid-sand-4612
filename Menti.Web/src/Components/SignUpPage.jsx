@@ -20,6 +20,7 @@ import { Link } from "react-router-dom";
 import Logo from "./Navbar/Logo";
 import { BsGoogle } from "react-icons/bs";
 import FacebookLoginComponent from "../FacebookLoginComponent";
+import { Api_Base_Url } from "../utils/common";
 
 const SignUpPage = () => {
   const toast = useToast();
@@ -45,7 +46,7 @@ const SignUpPage = () => {
   const handleRegister = (e) => {
     e.preventDefault();
     setLoading(true);
-    fetch(`${process.env.REACT_APP_APIBASEURL}/signup`,{
+    fetch(`${Api_Base_Url}/signup`,{
       method: "POST",
       body: JSON.stringify(userDetails),
       headers: {

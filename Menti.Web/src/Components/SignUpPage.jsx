@@ -13,6 +13,7 @@ import {
   Stack,
   Text,
   VStack,
+  useToast,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
@@ -21,14 +22,48 @@ import { BsGoogle } from "react-icons/bs";
 import FacebookLoginComponent from "../FacebookLoginComponent";
 
 const SignUpPage = () => {
-  const [input, setInput] = useState("");
+  const toast = useToast();
+  const initUserDetails = {
+    name: "",
+    email: "",
+    password: "",
+  }
+  const [userDetails, setUserDetails] = useState(initUserDetails);
+  const [loading, setLoading] = useState(false);
 
-  const handleInputChange = (e) => setInput(e.target.value);
+  const handleInputChange = (e) => {
+    const {name, value} = e.target;
+    setUserDetails({...userDetails, [name]:value});
+  };
 
-  const isError = input === "";
+  //const isError = input === "";
+  const isError = '';
 
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    fetch("https://mentiapi.cyclic.app/signup",{
+      method: "POST",
+      body: JSON.stringify(userDetails),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(res=>res.json())
+    .then(res => {
+      setLoading(false);
+      toast({
+        title: res.msg,
+        status: res.msg==="User already exists"?"info":"success",
+        duration: 3000,
+        isClosable: true,
+      });
+    })
+    .catch(err=>console.log(err))
+  }
 
   return (
     <Stack>
@@ -91,7 +126,7 @@ const SignUpPage = () => {
             </FormLabel>
             <Input
               type="text"
-              value={input}
+              name='name'
               onChange={handleInputChange}
               width="22.5rem"
               borderRadius="none"
@@ -116,7 +151,7 @@ const SignUpPage = () => {
             </FormLabel>
             <Input
               type="text"
-              value={input}
+              name="email"
               onChange={handleInputChange}
               width="22.5rem"
               borderRadius="none"
@@ -143,7 +178,7 @@ const SignUpPage = () => {
             <InputGroup size="md">
               <Input
                 pr="4.5rem"
-                value={input}
+                name="password"
                 type={show ? "text" : "password"}
                 onChange={handleInputChange}
                 borderRadius="none"
@@ -163,12 +198,16 @@ const SignUpPage = () => {
             )}
 
             <Button
+              isLoading={loading}
+              loadingText="Signing Up..."
+              spinnerPlacement='end'
               width="22.5rem"
               borderRadius="none"
               height="2.3rem"
               colorScheme="messenger"
               mt="0.6rem"
               fontWeight="bold"
+              onClick={handleRegister}
             >
               Sign up
             </Button>

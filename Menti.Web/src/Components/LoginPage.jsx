@@ -34,7 +34,7 @@ const LoginPage = () => {
   const handleClick = () => setShow(!show);
 
   const loginDetails = async (formState) => {
-    return await fetch(`${process.env.REACT_APP_API_BASE_URL}/login`, {
+    return await fetch(`${process.env.REACT_APP_APIBASEURL}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
